@@ -1,30 +1,29 @@
 <?php require __DIR__ . '/app/autoload.php'; ?>
 <?php require __DIR__ . '/views/header.php'; ?>
 
+
 <article>
-    <h1>Login</h1> <br>
+    <h1>Create an account</h1> <br>
 
     <form action="app/users/login.php" method="post">
         <div class="mb-3">
             <label for="email">Email</label>
             <input class="form-control" type="email" name="email" id="email" placeholder="email@email.com" required>
-            <small class="form-text">Please write your email address.</small>
+            <small class="form-text">Register your email address.</small>
         </div>
 
         <div class="mb-3">
             <label for="password">Password</label>
             <input class="form-control" type="password" name="password" id="password" required>
-            <small class="form-text">Please write your password.</small>
+            <small class="form-text"> Choose your password.</small>
         </div>
 
-        <button type="submit" class="btn btn-primary">Login</button>
-        <!--         <button type="submit" class="btn btn-primary">Sign up</button> -->
 
     </form>
 
     <br>
-    <form method="get" action="/register.php">
-        <button type="submit" class="btn btn-primary">Sign up</button>
+    <form method="get" action="/signup.php">
+        <button type="submit" class="btn btn-primary">Create an account</button>
     </form>
 
 </article>
