@@ -17,15 +17,18 @@
             <small class="form-text">Please write your password.</small>
         </div>
 
-        <button type="submit" class="btn btn-primary">Login</button>
+        <button type="submit" class="btn btn-secondary">Login</button>
         <!--         <button type="submit" class="btn btn-primary">Sign up</button> -->
 
     </form>
 
     <br>
     <form method="get" action="/register.php">
-        <button type="submit" class="btn btn-primary">Sign up</button>
+        <button type="submit" class="btn btn-secondary">Sign up</button>
+
     </form>
+
+
 
 </article>
 
