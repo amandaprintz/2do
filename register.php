@@ -2,9 +2,11 @@
 <?php require __DIR__ . '/views/header.php'; ?>
 
 
+
+
 <article>
     <h1>Create an account</h1> <br>
-    <form action="app/users/register.php" method="post">
+    <form action="/app/users/register.php" method="post" enctype="multipart/form-data">
 
         <div class="mb-3">
             <label for="email">Username</label>
@@ -24,27 +26,16 @@
             <small class="form-text"> Choose your password.</small>
         </div>
 
-
-        <div class="mb-3">
-            <label for="password">Password</label>
-            <input class="form-control" type="password" name="password" id="password" required>
-            <small class="form-text"> Choose your password.</small>
-        </div>
-
-
         <br>
 
-        <form action="/" method="post" enctype="multipart/form-data">
+        <div>
+            <label for="avatar">Choose your avatar image to upload</label> <br>
+            <input type="file" accept=".jpg, .jpeg, .png" name="avatar" id="avatar" required>
+        </div>
+        <br>
 
-            <div>
-                <label for="avatar">Choose your avatar image to upload</label> <br>
-                <input type="file" accept=".jpg, .jpeg, .png" name="avatar" id="avatar" required>
-            </div>
-            <br>
+        <button type="submit" class="btn btn-secondary">Create an account</button>
 
-            <button type="submit" class="btn btn-secondary">Create an account</button>
-
-        </form>
     </form>
 </article>
 
