@@ -18,7 +18,6 @@
         </div>
 
         <button type="submit" class="btn btn-secondary">Login</button>
-        <!--         <button type="submit" class="btn btn-primary">Sign up</button> -->
 
     </form>
 

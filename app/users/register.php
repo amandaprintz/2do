@@ -19,10 +19,8 @@ if (isset($_FILES['avatar'])) {
 if (isset($_POST['name'])) {
     $username = trim($_POST['name']);
     $email = $_POST['email'];
-    $password = $_FILES['password'];
-    $imgurl = $_POST['avatar'];
-
-    $database = new PDO('sqlite:database.db');
+    $password = $_POST['password'];
+    $imgurl = $_FILES['avatar'];
 
     $database->exec("INSERT INTO users (username, email, password, image_url) VALUES ('$username', '$email', '$password','$imgurl')");
 }
