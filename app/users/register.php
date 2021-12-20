@@ -13,7 +13,6 @@ if (isset($_POST['name'])) {
     $username = trim($_POST['name']);
     $email = $_POST['email'];
     $password = $_POST['password'];
-    $imgurl = $_FILES['avatar'];
 
     $database->exec("INSERT INTO users (username, email, password, image_url) VALUES ('$username', '$email', '$password','$imgurl')");
 }

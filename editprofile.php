@@ -1,5 +1,6 @@
 <?php require __DIR__ . '/app/autoload.php'; ?>
 <?php require __DIR__ . '/views/header.php'; ?>
+<?php require __DIR__ . '/Users/amandakarlsson/Desktop/2do/app/users/editprofile.php'; ?>
 
 <h1>Edit your profile</h1> <br>
 <form action="/app/users/register.php" method="post" enctype="multipart/form-data">
