@@ -10,10 +10,9 @@ require __DIR__ . '/../autoload.php';
 if (isset($_POST['username'], $_POST['email'], $_POST['password'])) {
 
 
-
-
-
     $username = trim(filter_var($_POST['username'], FILTER_SANITIZE_STRING));
+
+    die(var_dump($_POST));
 
     $email = trim(filter_var($_POST['email'], FILTER_SANITIZE_STRING));
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
