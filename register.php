@@ -1,10 +1,6 @@
 <?php require __DIR__ . '/app/autoload.php'; ?>
-<?php require __DIR__ . '/app/users/images.php'; ?>
+<?php require __DIR__ . '/app/users/editprofile.php'; ?>
 <?php require __DIR__ . '/views/header.php'; ?>
-
-
-
-
 
 <article>
     <h1>Create an account</h1> <br>
@@ -34,10 +30,6 @@
 
     </form>
 </article>
-
-
-
-
 
 </body>
 

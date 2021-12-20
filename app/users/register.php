@@ -6,24 +6,17 @@ require __DIR__ . '/../autoload.php';
 
 // In this file we register a new user.
 
+//to upload an avatar-img to the avatar-folder (located in database)
+
 
 //to insert username in database
 
 if (isset($_POST['name'])) {
-    $name = trim(filter_var($_POST['name'], FILTER_SANITIZE_STRING));
-    $email = trim(filter_var($_POST['email'], FILTER_SANITIZE_EMAIL));
+    $username = trim($_POST['name']);
+    $email = $_POST['email'];
     $password = $_POST['password'];
 
-
-    // $database->exec("INSERT INTO users (name, email, password) VALUES ('$name', '$email', '$password')");
-    $insertSQL = ("INSERT INTO users (name, email, password) VALUES (:name, :email, :password)");
-    $sql = $database->prepare($insertSQL);
-
-    $sql->bindParam(':name', $name, PDO::PARAM_STR);
-    $sql->bindParam(':email', $email, PDO::PARAM_STR);
-    $sql->bindParam(':password', $password, PDO::PARAM_STR);
-
-    $sql->execute();
+    $database->exec("INSERT INTO users (username, email, password, image_url) VALUES ('$username', '$email', '$password','$imgurl')");
 }
 
-redirect('/index.php');
+redirect('/');
