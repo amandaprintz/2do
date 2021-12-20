@@ -19,4 +19,4 @@ if (isset($_POST['name'])) {
     $database->exec("INSERT INTO users (username, email, password, image_url) VALUES ('$username', '$email', '$password','$imgurl')");
 }
 
-redirect('/');
+/* redirect('/'); */
