@@ -10,11 +10,20 @@ require __DIR__ . '/../autoload.php';
 //to insert username in database
 
 if (isset($_POST['name'])) {
-    $username = trim($_POST['name']);
-    $email = $_POST['email'];
+    $name = trim(filter_var($_POST['name'], FILTER_SANITIZE_STRING));
+    $email = trim(filter_var($_POST['email'], FILTER_SANITIZE_EMAIL));
     $password = $_POST['password'];
 
-    $database->exec("INSERT INTO users (username, email, password, image_url) VALUES ('$username', '$email', '$password','$imgurl')");
+
+    // $database->exec("INSERT INTO users (name, email, password) VALUES ('$name', '$email', '$password')");
+    $insertSQL = ("INSERT INTO users (name, email, password) VALUES (:name, :email, :password)");
+    $sql = $database->prepare($insertSQL);
+
+    $sql->bindParam(':name', $name, PDO::PARAM_STR);
+    $sql->bindParam(':email', $email, PDO::PARAM_STR);
+    $sql->bindParam(':password', $password, PDO::PARAM_STR);
+
+    $sql->execute();
 }
 
-redirect('/');
+redirect('/index.php');
