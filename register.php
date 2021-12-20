@@ -7,13 +7,13 @@
 
         <div class="mb-3">
             <label for="email">Username</label>
-            <input class="form-control" type="name" name="name" id="name" placeholder="AllanOpio" required>
+            <input class="form-control" type="name" name="name" id="name" placeholder="" required>
             <small class="form-text">Choose your username.</small>
         </div>
 
         <div class="mb-3">
             <label for="email">Email</label>
-            <input class="form-control" type="email" name="email" id="email" placeholder="contact@opm.com" required>
+            <input class="form-control" type="email" name="email" id="email" placeholder="yourmail@mail.com" required>
             <small class="form-text">Register your email address.</small>
         </div>
 
