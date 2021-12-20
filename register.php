@@ -27,12 +27,13 @@
         </div>
 
         <br>
-
+        <!--
         <div>
             <label for="avatar">Choose your avatar image to upload</label> <br>
             <input type="file" accept=".jpg, .jpeg, .png" name="avatar" id="avatar" required>
         </div>
         <br>
+ -->
 
         <button type="submit" class="btn btn-secondary">Create an account</button>
 
