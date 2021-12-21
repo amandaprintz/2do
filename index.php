@@ -5,8 +5,9 @@
     <h1><?php echo $config['title']; ?></h1>
 
 
+
     <?php if (isset($_SESSION['user'])) : ?>
-        <p>Welcome, <?php echo $_SESSION['user']['name']; ?>!</p>
+        <p>Welcome, <?php echo $_SESSION['user']['username']; ?>!</p>
     <?php endif; ?>
 </article>
 
