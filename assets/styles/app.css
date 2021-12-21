@@ -2,11 +2,6 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: rgb(35, 35, 38);
-  color: aliceblue;
-}
-
 .bg-light {
   background-color: black;
 }

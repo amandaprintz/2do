@@ -10,7 +10,7 @@
         <input type="file" accept=".jpg, .jpeg, .png" name="avatar" id="avatar" required>
         <small class="form-text"> Formats accepted: Jpg, Jpeg or Png. </small>
     </div>
-    <button type="submit" class="btn btn-secondary">Edit profile</button>
+    <button type="submit" class="btn btn-secondary">Change my image</button>
 
 </form>
 
