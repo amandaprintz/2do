@@ -11,6 +11,18 @@
         <small class="form-text"> Formats accepted: Jpg, Jpeg or Png. </small>
     </div>
     <button type="submit" class="btn btn-secondary">Change my image</button>
+    <br>
+    <br>
+
+    <div class="mb-3">
+        <label for="email">Change your email-address</label>
+        <input class="form-control" type="email" name="email" id="email" placeholder="email@email.com" required>
+        <small class="form-text">Please write your email address.</small>
+        <br>
+        <button type="submit" class="btn btn-secondary">Update email</button>
+
+    </div>
+
 
 </form>
 

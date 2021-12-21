@@ -3,7 +3,8 @@
 
 <article>
     <h1><?php echo $config['title']; ?></h1>
-    <p>This is the home page.</p>
+
+    <p>This is your home in your profile. </p>
 
     <?php if (isset($_SESSION['user'])) : ?>
         <p>Welcome, <?php echo $_SESSION['user']['username']; ?>!</p>
@@ -14,6 +15,8 @@
 
     <?php endif;
     endif; ?>
+
+
 </article>
 
 <?php require __DIR__ . '/views/footer.php'; ?>
