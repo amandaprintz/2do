@@ -24,15 +24,13 @@ if (isset($_FILES['image_url'])) {
 }; */
 
 //Logic for how to upload profile picture and also edit profile picture.
-
-if (isset($_FILES['avatar'])) {
+if (isset($_POST['picture'], $_FILES['avatar'])) {
 
     $avatarImage = trim(filter_var($_FILES['avatar']['name'], FILTER_SANITIZE_STRING));
-    $filename = date("y-m-d H-i-s") . $avatarImage;
+    $filename = $_SESSION['user']['id'] . $avatarImage;
     $destination =  __DIR__ . '/../../upload/' . $filename;
     move_uploaded_file($_FILES['avatar']['tmp_name'], $destination);
     $message = 'The file is uploaded';
-
 
     $insertSQL = ("UPDATE users SET image_url = :image_url_location WHERE id = :id");
 

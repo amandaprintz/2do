@@ -4,10 +4,10 @@
 <article>
     <h1><?php echo $config['title']; ?></h1>
 
-    <p>This is your home in your profile. </p>
+    <p>This is your home page. </p>
 
     <?php if (isset($_SESSION['user'])) : ?>
-        <p>Welcome, <?php echo $_SESSION['user']['username']; ?>!</p>
+        <p>Welcome, <?php echo $_SESSION['user']['username']; ?>! This is your home page for your profile. </p>
         <?php
         if (isset($_SESSION['user']['image_url'])) :
         ?>
