@@ -40,8 +40,6 @@
 
 </form>
 
-<?php var_dump($_SESSION); ?>
-
 </form>
 
 <?php require __DIR__ . '/views/footer.php'; ?>
