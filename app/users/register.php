@@ -3,6 +3,8 @@
 declare(strict_types=1);
 
 require __DIR__ . '/../autoload.php';
+require __DIR__ . '/Users/amandakarlsson/Desktop/2do/app/users/register.php';
+
 
 // In this file we register a new user.
 
@@ -21,7 +23,5 @@ if (isset($_POST['username'], $_POST['email'], $_POST['password'])) {
 
     $statement->execute();
 }
-
-
 
 redirect('/');

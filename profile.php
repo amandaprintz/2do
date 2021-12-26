@@ -2,7 +2,7 @@
 <?php require __DIR__ . '/views/header.php'; ?>
 
 <h1>Edit your profile</h1> <br>
-<form action="/app/users/edit.php" method="post" enctype="multipart/form-data">
+<form action="/app/users/editavatar.php" method="post" enctype="multipart/form-data">
 
     <div class="mb-3">
         <label for="avatar">Edit profile picture</label>
@@ -15,7 +15,7 @@
     <br>
 </form>
 
-<form name="email" action="/app/users/edit.php" method="post" enctype="multipart/form-data">
+<form name="email" action="/app/users/editemail.php" method="post" enctype="multipart/form-data">
     <div class="mb-3">
         <label for="email">Update your email-address</label>
         <input class="form-control" type="email" name="email" id="email" value=" <?= $_SESSION['user']['email']; ?>" required>

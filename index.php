@@ -7,7 +7,7 @@
     <p>This is your home page. </p>
 
     <?php if (isset($_SESSION['user'])) : ?>
-        <p>Welcome, <?php echo $_SESSION['user']['username']; ?>! This is your home page for your profile. </p>
+        <p>Welcome, <?php echo $_SESSION['user']['username']; ?>! Start creating your lists of tasks! </p>
         <?php
         if (isset($_SESSION['user']['image_url'])) :
         ?>
