@@ -27,11 +27,11 @@
 </form>
 <br>
 
-<form name="password" action="/app/users/edit.php" method="post" enctype="multipart/form-data">
+<form name="password" action="/app/users/editpassword.php" method="post" enctype="multipart/form-data">
 
     <div class="mb-3">
         <label for="email">Update your password</label>
-        <input class="form-control" type="email" name="email" id="email" placeholder="email@email.com" required>
+        <input class="form-control" type="password" name="password" id="password" placeholder="add your new password" required>
         <small class="form-text">Please write your email address.</small>
         <br>
         <button type="submit" class="btn btn-secondary">Update password</button>
