@@ -3,7 +3,7 @@
 
 <h1>Edit your profile</h1> <br>
 
-<!-- Formulär: Uppdatera profilbild-->
+<!-- Formulär:uppdatera profilbild-->
 <form action="/app/users/editavatar.php" method="post" enctype="multipart/form-data">
 
     <div class="mb-3">
@@ -17,32 +17,22 @@
     <br>
 </form>
 
-<!-- Formulär: Uppdatera email-->
+<!-- Formulär:uppdatera email-->
 <form name="email" action="/app/users/editemail.php" method="post" enctype="multipart/form-data">
     <div class="mb-3">
         <label for="email">Update your email-address</label>
-        <input class="form-control" type="email" name="email" id="email" value=" <?= $_SESSION['user']['email']; ?>" required>
+        <input class="form-control" type="email" name="email" id="email" value="<?= $_SESSION['user']['email']; ?>" required>
         <small class="form-text">Please write your email address.</small>
         <br>
         <button type="submit" class="btn btn-secondary">Update email</button>
 
-        <!-- här kollar jag om det emailMessage är satt i SESSION. se andra edit.php. om den är satt visas meddelandet
-"your mail has changed". -->
-        <?php if (isset($_SESSION['emailMessage'])) :
-            echo $_SESSION['emailMessage'];
-            unset($_SESSION['emailMessage']);
-
-        endif;
-        ?>
-
     </div>
-
-
 </form>
+<br>
+<!-- Formulär:uppdatera password-->
 
-
-<!-- Formulär: Uppdatera password-->
 <form name="password" action="/app/users/editpassword.php" method="post" enctype="multipart/form-data">
+
     <div class="mb-3">
         <label for="email">Update your password</label>
         <input class="form-control" type="password" name="password" id="password" placeholder="add your new password" required>

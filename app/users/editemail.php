@@ -13,8 +13,6 @@ if (isset($_POST['email'])) {
     $statement->bindParam(':email', $newEmail);
     $statement->execute();
     redirect('/index.php');
-
-    $_SESSION['emailMessage'] = "You just changed your email-adress to: " . $_SESSION['user']['email'];
 }
 
 
