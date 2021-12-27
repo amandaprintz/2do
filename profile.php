@@ -26,9 +26,20 @@
         <br>
         <button type="submit" class="btn btn-secondary">Update email</button>
 
+        <!-- här kollar jag om det emailMessage är satt i SESSION. se andra edit.php. om den är satt visas meddelandet
+"your mail has changed". -->
+        <?php if (isset($_SESSION['emailMessage'])) :
+            echo $_SESSION['emailMessage'];
+            unset($_SESSION['emailMessage']);
+
+        endif;
+        ?>
+
     </div>
+
+
 </form>
-<br>
+
 
 <!-- Formulär: Uppdatera password-->
 <form name="password" action="/app/users/editpassword.php" method="post" enctype="multipart/form-data">
