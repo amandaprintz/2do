@@ -4,7 +4,8 @@ declare(strict_types=1);
 
 require __DIR__ . '/../autoload.php';
 
-//Logic for how to upload profile picture and to edit profile picture.
+
+/* Logik: ladda upp & uppdatera profilbild. */
 if (isset($_POST['picture'], $_FILES['avatar'])) {
 
     $avatarImage = trim(filter_var($_FILES['avatar']['name'], FILTER_SANITIZE_STRING));
@@ -30,7 +31,11 @@ if (isset($_POST['picture'], $_FILES['avatar'])) {
     $sql->execute();
 
     $_SESSION['user'] = $sql->fetch(PDO::FETCH_ASSOC);
+
+    $_SESSION['message'] = "Profile-picture is sucessfully uploaded";
 }
+
+
 
 redirect('/index.php');
 ?>

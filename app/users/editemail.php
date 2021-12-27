@@ -3,6 +3,8 @@
 declare(strict_types=1);
 
 require __DIR__ . '/../autoload.php';
+
+/* Logik: uppdatera email */
 if (isset($_POST['email'])) {
 
     $newEmail = $_POST['email'];

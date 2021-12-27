@@ -23,7 +23,6 @@
             <small class="form-text"> Choose your password.</small>
         </div>
 
-        <br>
 
         <button type="submit" class="btn btn-secondary">Create an account</button>
 

@@ -16,6 +16,13 @@ if (isset($_POST['email'], $_POST['password'])) {
     // Fetch the user as an associative array.
     $user = $statement->fetch(PDO::FETCH_ASSOC);
 
+
+    if ($user === false) {
+        $_SESSION['error'] = 'The user does not exist, sign up to use 2do!';
+        redirect('/register.php');
+    }
+
+
     // If we couldn't find the user in the database, redirect back to the login
     // page with our custom redirect function.
     if (!$user) {

@@ -2,6 +2,8 @@
 <?php require __DIR__ . '/views/header.php'; ?>
 
 <h1>Edit your profile</h1> <br>
+
+<!-- Formulär: Uppdatera profilbild-->
 <form action="/app/users/editavatar.php" method="post" enctype="multipart/form-data">
 
     <div class="mb-3">
@@ -15,6 +17,7 @@
     <br>
 </form>
 
+<!-- Formulär: Uppdatera email-->
 <form name="email" action="/app/users/editemail.php" method="post" enctype="multipart/form-data">
     <div class="mb-3">
         <label for="email">Update your email-address</label>
@@ -27,8 +30,8 @@
 </form>
 <br>
 
+<!-- Formulär: Uppdatera password-->
 <form name="password" action="/app/users/editpassword.php" method="post" enctype="multipart/form-data">
-
     <div class="mb-3">
         <label for="email">Update your password</label>
         <input class="form-control" type="password" name="password" id="password" placeholder="add your new password" required>
