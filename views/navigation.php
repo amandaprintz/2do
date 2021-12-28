@@ -6,12 +6,14 @@
             <a class="nav-link <?php echo $_SERVER['SCRIPT_NAME'] === '/index.php' ? 'active' : ''; ?>" href="/index.php">Home</a>
         </li>
 
-        <li class="nav-item">
-            <a class="nav-link <?php echo $_SERVER['SCRIPT_NAME'] === '/about.php' ? 'active' : ''; ?>" href="/about.php">About</a>
-        </li>
+
 
         <li class="nav-item">
             <?php if (isset($_SESSION['user'])) : ?>
+
+        <li class="nav-item">
+            <a class="nav-link <?php echo $_SERVER['SCRIPT_NAME'] === '/mylists.php' ? 'active' : ''; ?>" href="/mylists.php">My Lists</a>
+        </li>
         <li class="nav-item">
             <a class="nav-link <?php echo $_SERVER['SCRIPT_NAME'] === '/profile.php' ? 'active' : ''; ?>" href="/profile.php">Edit profile</a>
         </li>

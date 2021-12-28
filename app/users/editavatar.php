@@ -31,8 +31,6 @@ if (isset($_POST['picture'], $_FILES['avatar'])) {
     $sql->execute();
 
     $_SESSION['user'] = $sql->fetch(PDO::FETCH_ASSOC);
-
-    $_SESSION['message'] = "Profile-picture is sucessfully uploaded";
 }
 
 
