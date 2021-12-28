@@ -20,33 +20,24 @@
         <small class="form-text"> Formats accepted: Jpg, Jpeg or Png. </small>
     </div>
     <button name="picture" type="submit" class="btn btn-secondary">Change my image</button>
-    <br>
-    <br>
 </form>
-
-
-
+<br>
 <!-- Formulär:uppdatera email-->
 <form name="email" action="/app/users/editemail.php" method="post" enctype="multipart/form-data">
     <div class="mb-3">
         <label for="email">Update your email-address</label>
         <input class="form-control" type="email" name="email" id="email" value="<?= $_SESSION['user']['email']; ?>" required>
         <small class="form-text">Please write your email address.</small>
-        <br>
         <button type="submit" class="btn btn-secondary">Update email</button>
-
     </div>
 </form>
-<br>
 <!-- Formulär:uppdatera password-->
-
 <form name="password" action="/app/users/editpassword.php" method="post" enctype="multipart/form-data">
 
     <div class="mb-3">
         <label for="email">Update your password</label>
         <input class="form-control" type="password" name="password" id="password" placeholder="add your new password" required>
         <small class="form-text">Please write your email address.</small>
-        <br>
         <button type="submit" class="btn btn-secondary">Update password</button>
 
     </div>

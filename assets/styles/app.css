@@ -21,3 +21,14 @@
   object-position: center;
   border-radius: 50%;
 }
+
+/* CSS for forms */
+
+/* .mb-3 {
+  padding: 15px;
+} */
+
+.form-text {
+  color: grey;
+  margin-bottom: 5px;
+}

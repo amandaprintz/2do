@@ -15,6 +15,8 @@
                 <img src="upload/<?php echo $_SESSION['user']['image_url'] ?>">
             </div>
 
+
+
     <?php endif;
     endif; ?>
 
