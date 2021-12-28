@@ -12,7 +12,15 @@ if (isset($_POST['password'])) {
     $statement->bindParam(':id', $_SESSION['user']['id'], PDO::PARAM_STR);
     $statement->bindParam(':password', $newPassword);
     $statement->execute();
+
+
+    $_SESSION['message'] = 'Your password has been updated successfully!';
+    redirect('/profile.php');
+} else {
+    $_SESSION['message'] = 'Sorry! Try filling in another password!';
+    redirect('/profile.php');
 }
+
 
 
 

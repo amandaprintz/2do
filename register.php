@@ -1,5 +1,7 @@
 <?php require __DIR__ . '/app/autoload.php'; ?>
 <?php require __DIR__ . '/views/header.php'; ?>
+<?php require __DIR__ . '/app/messages.php'; ?>
+
 
 <article>
     <h1>Create an account</h1> <br>
@@ -28,6 +30,9 @@
 
     </form>
 </article>
+
+
+<?php require __DIR__ . '/views/footer.php'; ?>
 
 </body>
 

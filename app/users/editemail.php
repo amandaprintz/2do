@@ -12,8 +12,16 @@ if (isset($_POST['email'])) {
     $statement->bindParam(':id', $_SESSION['user']['id'], PDO::PARAM_STR);
     $statement->bindParam(':email', $newEmail);
     $statement->execute();
-    redirect('/index.php');
+
+
+    $_SESSION['message'] = 'Your email has updated successfully!';
+    redirect('/profile.php');
+} else {
+    $_SESSION['message'] = 'Sorry! Try again!';
+    redirect('/profile.php');
 }
+
+redirect('/index.php');
 
 
 

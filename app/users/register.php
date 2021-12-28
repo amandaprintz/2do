@@ -26,4 +26,6 @@ if (isset($_POST['username'], $_POST['email'], $_POST['password'])) {
     $statement->execute();
 }
 
+
+
 redirect('/');

@@ -1,5 +1,7 @@
 <?php require __DIR__ . '/app/autoload.php'; ?>
 <?php require __DIR__ . '/views/header.php'; ?>
+<?php require __DIR__ . '/app/messages.php'; ?>
+
 
 <h1>Edit your profile</h1> <br>
 
@@ -16,6 +18,8 @@
     <br>
     <br>
 </form>
+
+
 
 <!-- Formulär:uppdatera email-->
 <form name="email" action="/app/users/editemail.php" method="post" enctype="multipart/form-data">
@@ -44,6 +48,12 @@
 
 </form>
 
-</form>
+<?php if ($error !== '') : ?>
+    <p class="error"><?= $error; ?></p>
+<?php endif; ?>
+
+<?php if ($message !== '') : ?>
+    <p class="success"><?php echo $message; ?></p>
+<?php endif; ?>
 
 <?php require __DIR__ . '/views/footer.php'; ?>

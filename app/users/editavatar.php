@@ -31,6 +31,13 @@ if (isset($_POST['picture'], $_FILES['avatar'])) {
     $sql->execute();
 
     $_SESSION['user'] = $sql->fetch(PDO::FETCH_ASSOC);
+
+
+    $_SESSION['message'] = 'Your profile picture has been updated successfully!';
+    redirect('/profile.php');
+} else {
+    $_SESSION['message'] = 'Sorry! Try again!';
+    redirect('/profile.php');
 }
 
 
