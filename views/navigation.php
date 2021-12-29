@@ -1,5 +1,13 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#"><?php echo $config['title']; ?></a>
+    <?php
+    if (isset($_SESSION['user']['image_url'])) :
+    ?>
+        <div class="profile">
+            <img src="upload/<?php echo $_SESSION['user']['image_url'] ?>">
+        </div>
+    <?php endif;
+    ?>
+    <a class="navbar-brand" href="http://localhost:8000/index.php"><?php echo $config['title']; ?></a>
 
     <!--     Visas i meny när användare är inloggad. -->
     <ul class="navbar-nav">
@@ -24,4 +32,6 @@
         <?php endif; ?>
         </li>
     </ul>
+
+
 </nav>

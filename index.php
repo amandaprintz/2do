@@ -7,18 +7,13 @@
     <p>This is your home page. </p>
 
     <?php if (isset($_SESSION['user'])) : ?>
-        <p>Welcome, <?php echo $_SESSION['user']['username']; ?>! Start creating your lists of tasks! </p>
-        <?php
-        if (isset($_SESSION['user']['image_url'])) :
-        ?>
-            <div class="profile">
-                <img src="upload/<?php echo $_SESSION['user']['image_url'] ?>">
-            </div>
+        <p>Welcome, <?php echo $_SESSION['user']['username']; ?>! </p>
+
 
 
 
     <?php endif;
-    endif; ?>
+    ?>
 
 
 </article>

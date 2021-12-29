@@ -17,7 +17,7 @@
         <label for="avatar">Edit profile picture</label>
         <br>
         <input type="file" accept=".jpg, .jpeg, .png" name="avatar" id="avatar" required>
-        <small class="form-text"> Formats accepted: Jpg, Jpeg or Png. </small>
+        <small class="form-text"> Your picture can be either a jpg, jpeg or png. </small>
     </div>
     <button name="picture" type="submit" class="btn btn-secondary">Change my image</button>
 </form>
@@ -26,8 +26,8 @@
 <form name="email" action="/app/users/editemail.php" method="post" enctype="multipart/form-data">
     <div class="mb-3">
         <label for="email">Update your email-address</label>
-        <input class="form-control" type="email" name="email" id="email" value="<?= $_SESSION['user']['email']; ?>" required>
-        <small class="form-text">Please write your email address.</small>
+        <input class="form-control" type="email" name="email" id="email" placeholder="add your new email" required>
+        <small class=" form-text">Please write your email address.</small>
         <button type="submit" class="btn btn-secondary">Update email</button>
     </div>
 </form>

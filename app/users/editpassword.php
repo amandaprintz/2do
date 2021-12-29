@@ -13,7 +13,7 @@ if (isset($_POST['password'])) {
     $statement->bindParam(':password', $newPassword);
     $statement->execute();
 
-
+    /* Meddelar om lösenord lyckades ändras eller ej*/
     $_SESSION['message'] = 'Your password has been updated successfully!';
     redirect('/profile.php');
 } else {

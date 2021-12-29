@@ -32,7 +32,7 @@ if (isset($_POST['picture'], $_FILES['avatar'])) {
 
     $_SESSION['user'] = $sql->fetch(PDO::FETCH_ASSOC);
 
-
+    /* Meddelar om profilbilden lyckades ladda upp eller ej*/
     $_SESSION['message'] = 'Your profile picture has been updated successfully!';
     redirect('/profile.php');
 } else {

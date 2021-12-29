@@ -13,6 +13,7 @@ if (isset($_POST['email'])) {
     $statement->bindParam(':email', $newEmail);
     $statement->execute();
 
+    /* Meddelar om email lyckades ändras eller ej*/
 
     $_SESSION['message'] = 'Your email has updated successfully!';
     redirect('/profile.php');
