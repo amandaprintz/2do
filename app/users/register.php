@@ -3,8 +3,8 @@
 declare(strict_types=1);
 
 require __DIR__ . '/../autoload.php';
-require __DIR__ . '/Users/amandakarlsson/Desktop/2do/app/users/register.php';
-
+/* require __DIR__ . '/register.php';
+ */
 
 
 /* Logik: registrera ny användare */
