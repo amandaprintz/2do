@@ -14,7 +14,7 @@ if (isset($_POST['title'])) {
 
     $sql->execute();
 
-    $_SESSION['user'] = $sql->fetch(PDO::FETCH_ASSOC);
+    $_SESSION['user'][] = $sql->fetchAll(PDO::FETCH_ASSOC);
 }
 
 redirect('/../../mylists.php');
