@@ -8,7 +8,7 @@
     <form action="/app/users/register.php" method="post" enctype="multipart/form-data">
 
         <div class="mb-3">
-            <label for="username">Username</label>
+            <label for="username">Name</label>
             <input class="form-control" type="text" name="username" id="username" placeholder="" required>
             <small class="form-text">Choose your username.</small>
         </div>

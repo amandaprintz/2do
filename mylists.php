@@ -16,6 +16,7 @@
         </div>
         <button type="submit" class="btn btn-info">Add list</button>
     </form>
+    <br>
 
     <?php
     $lists = showLists($database);
