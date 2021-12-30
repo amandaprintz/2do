@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-/* Startar sessioner */
+/* Starting sessions */
 session_start();
 
 /* Default timezone to coordinated universal time. */

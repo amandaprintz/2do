@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 require __DIR__ . '/../autoload.php';
 
-/* Logik: updatera lösenord */
-/* Kollar om ett nuvarande password finns och skapar en ny variabel med nytt password. */
+/* Logic: update password */
+/* Checks if a current password exists and creates a new variable with a new password. */
 if (isset($_POST['password'])) {
     $newPassword = password_hash($_POST['password'], PASSWORD_DEFAULT);
     $statement = $database->prepare('UPDATE users SET password = :password WHERE id = :id');
@@ -13,7 +13,7 @@ if (isset($_POST['password'])) {
     $statement->bindParam(':password', $newPassword);
     $statement->execute();
 
-    /* Meddelar om lösenord lyckades ändras eller ej*/
+    /* Message: lets us know if the password  was successfully uploaded. */
     $_SESSION['message'] = 'Your password has been updated successfully!';
     redirect('/profile.php');
 } else {

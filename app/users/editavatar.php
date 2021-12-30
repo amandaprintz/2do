@@ -5,7 +5,7 @@ declare(strict_types=1);
 require __DIR__ . '/../autoload.php';
 
 
-/* Logik: ladda upp & uppdatera profilbild. */
+/* Logic:  upload & update profilbild. */
 if (isset($_POST['picture'], $_FILES['avatar'])) {
 
     $avatarImage = trim(filter_var($_FILES['avatar']['name'], FILTER_SANITIZE_STRING));
@@ -15,11 +15,8 @@ if (isset($_POST['picture'], $_FILES['avatar'])) {
     $message = 'The file is uploaded';
 
     $insertSQL = ("UPDATE users SET image_url = :image_url_location WHERE id = :id");
-
     $sql = $database->prepare($insertSQL);
-
     $sql->bindParam(':image_url_location', $filename, PDO::PARAM_STR);
-
     $sql->bindParam(':id', $_SESSION['user']['id'], PDO::PARAM_INT);
 
     $sql->execute();
@@ -32,7 +29,7 @@ if (isset($_POST['picture'], $_FILES['avatar'])) {
 
     $_SESSION['user'] = $sql->fetch(PDO::FETCH_ASSOC);
 
-    /* Meddelar om profilbilden lyckades ladda upp eller ej*/
+    /* Message: lets us know if the profile picture was successfully uploaded. */
     $_SESSION['message'] = 'Your profile picture has been updated successfully!';
     redirect('/profile.php');
 } else {

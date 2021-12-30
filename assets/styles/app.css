@@ -1,9 +1,20 @@
+/* Global CSS */
+
 * {
   box-sizing: border-box;
 }
 
-h1 {
-  margin-top: -30px;
+body {
+  background-color: rgb(29, 29, 29);
+  color: white;
+}
+
+.navbar {
+  background-color: rgb(54, 54, 54);
+}
+
+.navbar a {
+  color: lightgray;
 }
 
 .profile img {
@@ -23,7 +34,7 @@ h1 {
   border-radius: 50%;
 }
 
-/* CSS for forms */
+/* CSS formulär*/
 
 /* .mb-3 {
   padding: 15px;

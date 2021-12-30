@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 require __DIR__ . '/../autoload.php';
 
-/* Logik: uppdatera email */
+/* Logic: update email */
 if (isset($_POST['email'])) {
 
     $newEmail = $_POST['email'];
@@ -13,7 +13,7 @@ if (isset($_POST['email'])) {
     $statement->bindParam(':email', $newEmail);
     $statement->execute();
 
-    /* Meddelar om email lyckades ändras eller ej*/
+    /* Message: lets us know if the email was successfully uploaded. */
 
     $_SESSION['message'] = 'Your email has updated successfully!';
     redirect('/profile.php');

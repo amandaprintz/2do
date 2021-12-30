@@ -1,9 +1,9 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark">
     <?php
     if (isset($_SESSION['user']['image_url'])) :
     ?>
         <div class="profile">
-            <img src="upload/<?php echo $_SESSION['user']['image_url'] ?>">
+            <img src="upload/<?php echo $_SESSION['user']['image_url'] ?> ">
         </div>
     <?php endif;
     ?>

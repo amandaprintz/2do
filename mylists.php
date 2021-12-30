@@ -10,30 +10,34 @@
 
     <form action="/app/tasks/addlist.php" method="post">
         <div class="mb-3">
-            <label for="title">Title </label>
-            <input class="form-control" type="name" name="title" id="title" placeholder="write the title to your list" required>
+            <label for="title"><b>Add new list</b> </label>
+            <input class="form-control" type="name" name="title" id="title" placeholder="Title" required>
             <small class="form-text">Please write the name of your list.</small>
         </div>
-        <button type="submit" class="btn btn-info">Add list</button>
+        <button type="submit" class="btn btn-secondary">Add list</button>
     </form>
     <br>
+
+
 
     <?php
     $lists = showLists($database);
     foreach ($lists as $list) :
         echo $list['title'];
     endforeach;
-
-
-    /*     Exempel: Länkar samman tasks med lists
- */    // "SELECT lists.*, tasks.* FROM tasks JOIN lists ON tasks.list_id = lists.id WHERE tasks.user_id = SESSION ID"
-    // echo showLists($database);
     ?>
 
 
 
+
     <!--
-    <form action="/app/tasks/addtask.php" method="post">
+    /* Exempel: Länkar samman tasks med lists
+    */ // "SELECT lists.*, tasks.* FROM tasks JOIN lists ON tasks.list_id = lists.id WHERE tasks.user_id = SESSION ID"
+    // echo showLists($database);
+
+
+
+    /* <form action="/app/tasks/addtask.php" method="post">
         <div class="mb-3">
             <label for="title">Title </label>
             <input class="form-control" type="name" name="title" id="title" placeholder="write task title here" required>
@@ -50,7 +54,7 @@
             <small class="form-text">Please fill in your tasks.</small>
         </div>
         <button type="submit" class="btn btn-info">Add new task</button>
-    </form> -->
+    </form> */ -->
 
 </article>
 
