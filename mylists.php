@@ -22,10 +22,16 @@
 
     <?php
     $lists = showLists($database);
-    foreach ($lists as $list) :
-        echo $list['title'];
-    endforeach;
+
+    foreach ($lists as $list) : ?>
+        <ul>
+            <?php echo $list['title']; ?>
+        </ul>
+
+    <?php endforeach;
     ?>
+
+
 
 
 
