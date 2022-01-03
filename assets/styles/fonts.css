@@ -5,9 +5,36 @@
   src: url('/assets/fonts/Syne-VariableFont_wght.ttf');
   font-weight: bold;
 }
+@font-face {
+  font-family: Questrial;
+  src: url('/assets/fonts/Questrial-Regular.ttf');
+}
 
 h1 {
   margin-top: -25px;
   font-family: Syne;
   font-size: 2.4rem;
+}
+
+h2 {
+  font-family: Syne;
+  font-size: 1.5rem;
+}
+
+.nav-link {
+  font-family: Syne;
+  font-size: 1.2rem;
+}
+
+.navbar-brand {
+  font-family: Syne;
+  font-size: 3rem;
+}
+
+p,
+.form-text,
+label,
+input,
+button {
+  font-family: Questrial;
 }

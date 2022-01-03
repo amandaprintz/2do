@@ -2,7 +2,7 @@
 <?php require __DIR__ . '/views/header.php'; ?>
 
 <article>
-    <h1><?php echo $config['title']; ?></h1>
+    <!--  <h1><?php echo $config['title']; ?></h1> -->
 
     <p>This is your home page. </p>
 
@@ -10,11 +10,8 @@
         <p>Welcome, <?php echo $_SESSION['user']['username']; ?>! </p>
 
 
-
-
     <?php endif;
     ?>
-
 
 </article>
 

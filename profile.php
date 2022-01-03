@@ -38,6 +38,13 @@
         <label for="email">Update your password</label>
         <input class="form-control" type="password" name="password" id="password" placeholder="add your new password" required>
         <small class="form-text">Please write your email address.</small>
+
+    </div>
+    <!-- Formulär:verifiera password-->
+    <div class="mb-3">
+        <label for="email">Confirm password</label>
+        <input class="form-control" type="password" name="confPassword" id="confPpassword" placeholder="add your new password again to confirm" required>
+        <small class="form-text">Please confirm your password.</small>
         <button type="submit" class="btn btn-secondary">Update password</button>
 
     </div>
