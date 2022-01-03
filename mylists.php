@@ -7,7 +7,6 @@
     <h1>Lists & tasks</h1>
     <p>Add your lists with your tasks here</p>
     <br>
-
     <form action="/app/tasks/addlist.php" method="post">
         <div class="mb-3">
             <label for="title">
@@ -21,7 +20,7 @@
     <br>
 
 
-
+    <!-- Echoing out our lists using a foreach loop -->
     <?php
     $lists = showLists($database);
 

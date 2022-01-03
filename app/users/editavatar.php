@@ -5,6 +5,8 @@ declare(strict_types=1);
 require __DIR__ . '/../autoload.php';
 
 
+
+
 /* Logic:  upload & update profilbild. */
 if (isset($_POST['picture'], $_FILES['avatar'])) {
 

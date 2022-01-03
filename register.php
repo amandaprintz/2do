@@ -36,9 +36,3 @@
 
 
 <?php require __DIR__ . '/views/footer.php'; ?>
-
-</body>
-
-</html>
-
-<?php require __DIR__ . '/views/footer.php'; ?>
