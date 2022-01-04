@@ -33,6 +33,28 @@
             <h2><?php echo $list['title'] ?></h2>
             </p>
 
+            <!-- Echoing out all tasks -->
+
+            <?php $fetchAllTasks = fetchAllTasks($database);
+
+            $list = [];
+            foreach ($fetchAllTasks as $task) {
+                $list = [
+                    $task[$list['list_id']] =
+                        [
+                            'id' => '',
+                            'title' => '',
+                            'description' => '',
+                            'deadline' => ''
+                        ]
+                ];
+            } ?>
+            <?php
+
+            foreach ($lists['$task'] as $list) :
+
+            endforeach; ?>
+
 
             <div>
                 <!-- Form to add task(hidden if you haven't pressed the button below) -->
