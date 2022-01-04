@@ -1,0 +1,14 @@
+/* CSS file for all forms */
+.mb-3 {
+  margin-top: 10px;
+}
+
+/* This class is specifik for the "Add-task"-form since its called with JS. */
+.hidden {
+  display: none;
+}
+
+.form-text {
+  color: grey;
+  margin-bottom: 5px;
+}

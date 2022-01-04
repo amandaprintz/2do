@@ -40,7 +40,7 @@
     </div>
 
 </form>
-
+<!-- Message if your updates were successful or failed -->
 <?php if ($error !== '') : ?>
     <p class="error"><?= $error; ?></p>
 <?php endif; ?>

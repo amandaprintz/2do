@@ -7,6 +7,7 @@
     <h1>Lists & tasks</h1>
     <p>Add your lists with your tasks here</p>
     <br>
+    <!-- Form to add a list -->
     <form action="/app/tasks/addlist.php" method="post">
         <div class="mb-3">
             <label for="title">
@@ -20,7 +21,7 @@
     <br>
 
 
-    <!-- Echoing out our lists using a foreach loop -->
+    <!-- Echoing out our lists using foreach -->
     <?php
     $lists = showLists($database);
 
@@ -33,21 +34,19 @@
             </p>
 
             <div>
+                <!-- Form to add task(hidden if you haven't pressed the button below) -->
                 <button class="btn btn-secondary show-form">Add a task</button>
-
                 <form action="/app/tasks/tasks.php" method="post" class="hidden">
                     <div class="mb-3">
                         <label for="title">Title </label>
                         <input class="form-control" type="name" name="title" id="title" placeholder="write task title here" required>
                         <small class="form-text">Please fill in a title for your task.</small>
                     </div>
-
                     <div class="mb-3">
                         <label for="tasks">Description</label>
                         <input class="form-control" type="description" name="description" id="description" placeholder="write task description" required>
                         <small class="form-text">Please fill in a description for your task</small>
                     </div>
-
                     <div class="mb-3">
                         <label for="deadline">Deadline</label>
                         <input class="form-control" type="date" name="deadline" id="deadline">

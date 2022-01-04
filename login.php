@@ -3,7 +3,7 @@
 
 <article>
     <h1>Login</h1> <br>
-
+    <!-- Form to log in to your users page -->
     <form action="app/users/login.php" method="post">
         <div class="mb-3">
             <label for="email">Email</label>

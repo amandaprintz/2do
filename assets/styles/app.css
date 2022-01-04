@@ -20,6 +20,13 @@ body {
   color: lightgray;
 }
 
+.footer {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  color: #4d4d4d;
+}
+
 .profile img {
   width: 120px;
   height: 120px;
@@ -38,12 +45,12 @@ body {
   margin-bottom: 20px;
 }
 
-/* CSS formulär*/
-
-.form-text {
-  color: grey;
-  margin-bottom: 5px;
+.login-intro p {
+  font-family: Syne;
+  font-size: 1.5rem;
 }
+
+/* CSS MY LIST: Lists and tasks */
 
 .lists-box {
   background-color: #363636;
@@ -51,22 +58,7 @@ body {
   margin-bottom: 15px;
 }
 
-.footer {
-  position: absolute;
-  width: 100%;
-  text-align: center;
-  color: #4d4d4d;
-}
-
 .login-intro p {
   font-family: Syne;
   font-size: 1.5rem;
-}
-
-.hidden {
-  display: none;
-}
-
-.mb-3 {
-  margin-top: 10px;
 }

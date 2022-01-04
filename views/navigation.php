@@ -1,4 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark">
+    <!-- Calling the profile imgage chosen for this specific user.  -->
     <?php
     if (isset($_SESSION['user']['image_url'])) :
     ?>
@@ -7,9 +8,10 @@
         </div>
     <?php endif;
     ?>
+    <!-- Showing the websites name and you are directed to the indez page when clicking on it.  -->
     <a class="navbar-brand" href="http://localhost:8000/index.php"><?php echo $config['title']; ?></a>
 
-    <!--     Visas i meny när användare är inloggad. -->
+    <!--     These links are visible when you are LOGGED IN. -->
     <ul class="navbar-nav">
         <li class="nav-item">
             <?php if (isset($_SESSION['user'])) : ?>
@@ -22,7 +24,7 @@
         <li> <a class="nav-link" href="/app/users/logout.php">Logout</a>
         </li>
 
-        <!--     Visas i meny när användare är utloggad. -->
+        <!--     These links are visible when you are LOGGED OUT. -->
     <?php else : ?>
         <li class="nav-item">
             <a class="nav-link <?php echo $_SERVER['SCRIPT_NAME'] === '/index.php' ? 'active' : ''; ?>" href="/index.php">Home</a>

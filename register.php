@@ -4,6 +4,7 @@
 
 
 <article>
+    <!-- Form to create an account on the to-do list website -->
     <h1>Create an account</h1> <br>
     <form action="/app/users/register.php" method="post" enctype="multipart/form-data">
 
@@ -25,13 +26,9 @@
             <small class="form-text"> Choose your password.</small>
         </div>
 
-
         <button type="submit" class="btn btn-secondary">Create an account</button>
 
     </form>
-
-
-
 </article>
 
 
