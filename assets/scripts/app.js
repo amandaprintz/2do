@@ -1,6 +1,8 @@
-/* console.log('Hello World'); */
-/*
-In progress: click to show form
-function showForm() {
-  document.getElementById('formElement').style.display = 'block';
-} */
+/* Script: togglar mellan att gömma och visa formulär för add task */
+const buttons = document.querySelectorAll('.show-form');
+buttons.forEach((button) => {
+  button.addEventListener('click', (e) => {
+    e.preventDefault();
+    button.parentNode.childNodes[3].classList.toggle('hidden');
+  });
+});

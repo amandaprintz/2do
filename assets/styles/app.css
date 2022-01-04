@@ -40,19 +40,15 @@ body {
 
 /* CSS formulär*/
 
-/* .mb-3 {
-  padding: 15px;
-} */
-
 .form-text {
   color: grey;
   margin-bottom: 5px;
 }
 
 .lists-box {
-  padding: 20px;
   background-color: #363636;
-  margin-bottom: 20px;
+  /*   margin-bottom: 20px;
+  margin-top: 20px; */
 }
 
 .footer {
@@ -60,4 +56,13 @@ body {
   width: 100%;
   text-align: center;
   color: #4d4d4d;
+}
+
+.login-intro p {
+  font-family: Syne;
+  font-size: 1.5rem;
+}
+
+.hidden {
+  display: none;
 }

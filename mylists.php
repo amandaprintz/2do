@@ -26,49 +26,50 @@
 
     foreach ($lists as $list) :
         $list['title']; ?>
-        <form>
-            <div class="lists-box">
-                <p class=“list”>
-                <h2><?php echo $list['title'] ?></h2>
-                </p>
 
-        </form>
+        <div class="lists-box">
+            <p class=“list”>
+            <h2><?php echo $list['title'] ?></h2>
+            </p>
 
-        <!-- In progress: click to show form
-        <button class="btn btn-secondary" onclick="showForm(formElement)">Show the form</button>
-        <form id="formElement" style="display: none;"> -->
 
-        <form action="/app/tasks/tasks.php" method="post">
-            <div class="mb-3">
-                <label for="title">Title </label>
-                <input class="form-control" type="name" name="title" id="title" placeholder="write task title here" required>
-                <small class="form-text">Please fill in your task name.</small>
+            <div>
+                <button class="btn btn-secondary show-form">Add a task</button>
+
+                <form action="/app/tasks/tasks.php" method="post" class="hidden">
+                    <div class="mb-3">
+                        <label for="title">Title </label>
+                        <input class="form-control" type="name" name="title" id="title" placeholder="write task title here" required>
+                        <small class="form-text">Please fill in a title for your task.</small>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="tasks">Description</label>
+                        <input class="form-control" type="description" name="description" id="description" placeholder="write task description" required>
+                        <small class="form-text">Please fill in a description for your task</small>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="deadline">Deadline</label>
+                        <input class="form-control" type="date" name="deadline" id="deadline">
+                        <small class="form-text">Please choose your deadline for your task.</small>
+                    </div>
+
+                    <button type="submit" class="btn btn-secondary">Save task</button>
+
+
+                </form>
             </div>
-            <div class="description-form">
-                <label for="tasks">Description</label>
-                <input class="form-control" type="description" name="description" id="description" placeholder="write task description" required>
-                <small class="form-text">Please fill in your tasks.</small>
-            </div>
-            <div class="mb-3">
-                <label for="deadline">Deadline</label>
-                <input class="form-control" type="date" name="deadline" id="deadline" placeholder="write ">
-                <small class="form-text">Please choose your deadline for your task.</small>
-            </div>
-            <button type="submit" class="btn btn-secondary">Save</button>
 
-        </form>
-        </form>
+
+        <?php endforeach;
+        ?>
         </div>
+</article>
 
-    <?php endforeach;
-    ?>
-    </div>
-
-    <!--
-  Exempel: Länkar samman tasks med lists
+<!--   Exempel: Länkar samman tasks med lists
     */ // "SELECT lists.*, tasks.* FROM tasks JOIN lists ON tasks.list_id = lists.id WHERE tasks.user_id = SESSION ID"
-    // echo showLists($database);
-
+    // echo showLists($database); -->
 
 
 
