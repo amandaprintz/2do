@@ -33,6 +33,7 @@
             <h2><?php echo $list['title'] ?></h2>
             </p>
 
+
             <div>
                 <!-- Form to add task(hidden if you haven't pressed the button below) -->
                 <button class="btn btn-secondary show-form">Add a task</button>
@@ -53,6 +54,7 @@
                         <small class="form-text">Please choose your deadline for your task.</small>
                     </div>
 
+                    <input type="hidden" name="list_id" value="<?php echo $list['id'] ?>">
                     <button type="submit" class="btn btn-secondary">Save task</button>
 
 

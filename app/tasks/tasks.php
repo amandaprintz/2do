@@ -17,10 +17,10 @@ if (isset($_POST['title'], $_POST['description'], $_POST['deadline'])) {
 
 
     $sql->execute();
-
-    $_SESSION['user'][] = $sql->fetchAll(PDO::FETCH_ASSOC);
 }
 
 
 
 redirect('/../../mylists.php');
+
+/* fånga upp List_id från post och spara undan i databasen. */

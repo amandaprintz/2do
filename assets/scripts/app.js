@@ -3,6 +3,8 @@ const buttons = document.querySelectorAll('.show-form');
 buttons.forEach((button) => {
   button.addEventListener('click', (e) => {
     e.preventDefault();
-    button.parentNode.childNodes[3].classList.toggle('hidden');
+    button.parentNode.querySelector('form').classList.toggle('hidden');
   });
 });
+
+/* Sibling selector  */

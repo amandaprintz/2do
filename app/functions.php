@@ -25,7 +25,7 @@ function showLists($database)
 
 
 /* Function to show tasks */
-function fetchAllTasks(PDO $database): array
+function fetchAllTasks($database): array
 {
 
     $sql = $database->prepare('SELECT lists.*, tasks.* FROM tasks JOIN lists on tasks.list_id = lists.id WHERE lists.user_id = :id');
