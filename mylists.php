@@ -65,11 +65,4 @@
     ?>
 
 </article>
-
-<!--   Exempel: Länkar samman tasks med lists
-    */ // "SELECT lists.*, tasks.* FROM tasks JOIN lists ON tasks.list_id = lists.id WHERE tasks.user_id = SESSION ID"
-    // echo showLists($database); -->
-
-
-
 <?php require __DIR__ . '/views/footer.php'; ?>

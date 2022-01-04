@@ -4,8 +4,6 @@
 <article>
     <!--  <h1><?php echo $config['title']; ?></h1> -->
 
-    <!--     <p>This is your home page. </p> -->
-
     <div class="login-intro">
         <?php if (isset($_SESSION['user'])) : ?>
             <p>Welcome, <?php echo $_SESSION['user']['username']; ?>! </p>
@@ -13,11 +11,9 @@
         <?php endif;
         ?>
 
-        <div class="image-parent">
-            <div class="image-child"><img src="/assets/images/intropicture.png" alt="two humans with a to-do list "></class>
-            </div>
-        </div>
     </div>
+    <!--     <p>Go to the tab My Lists to begin planning.</p>
+ -->
 </article>
 
 <?php require __DIR__ . '/views/footer.php'; ?>

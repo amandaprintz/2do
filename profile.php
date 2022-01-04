@@ -4,11 +4,9 @@
 
 
 <h1>Edit your profile</h1> <br>
-
 <div class="edit-profile">
     <img src="upload/<?php echo $_SESSION['user']['image_url'] ?>">
 </div>
-
 <!-- Form: update profile pic-->
 <form action="/app/users/editavatar.php" method="post" enctype="multipart/form-data">
 
@@ -37,16 +35,9 @@
         <label for="email">Update your password</label>
         <input class="form-control" type="password" name="password" id="password" placeholder="add your new password" required>
         <small class="form-text">Please write your email address.</small>
-
-    </div>
-    <!-- Form: Verify email-->
-    <!--    <div class="mb-3">
-        <label for="email">Confirm password</label>
-        <input class="form-control" type="password" name="confPassword" id="confPpassword" placeholder="add your new password again to confirm" required>
-        <small class="form-text">Please confirm your password.</small>
         <button type="submit" class="btn btn-secondary">Update password</button>
 
-    </div> -->
+    </div>
 
 </form>
 
