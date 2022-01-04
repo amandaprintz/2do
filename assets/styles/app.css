@@ -47,8 +47,8 @@ body {
 
 .lists-box {
   background-color: #363636;
-  /*   margin-bottom: 20px;
-  margin-top: 20px; */
+  padding: 20px;
+  margin-bottom: 15px;
 }
 
 .footer {
@@ -65,4 +65,8 @@ body {
 
 .hidden {
   display: none;
+}
+
+.mb-3 {
+  margin-top: 10px;
 }

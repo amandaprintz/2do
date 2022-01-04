@@ -32,7 +32,6 @@
             <h2><?php echo $list['title'] ?></h2>
             </p>
 
-
             <div>
                 <button class="btn btn-secondary show-form">Add a task</button>
 
@@ -60,11 +59,11 @@
 
                 </form>
             </div>
-
-
-        <?php endforeach;
-        ?>
         </div>
+
+    <?php endforeach;
+    ?>
+
 </article>
 
 <!--   Exempel: Länkar samman tasks med lists
