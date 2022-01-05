@@ -6,5 +6,3 @@ buttons.forEach((button) => {
     button.parentNode.querySelector('form').classList.toggle('hidden');
   });
 });
-
-/* Sibling selector  */

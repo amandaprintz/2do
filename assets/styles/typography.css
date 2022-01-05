@@ -39,3 +39,8 @@ button {
   font-family: Questrial;
   font-size: 16.5px;
 }
+
+p.list {
+  font-family: Syne;
+  font-size: 1.5rem;
+}

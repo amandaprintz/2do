@@ -31,11 +31,16 @@
             'listTitle' => $task['listTitle'],
             'taskTitle' => $task['taskTitle'],
             'listId' => $task['listId'],
+            'taskDescription' => $task['taskDescription'],
+            'taskDeadline' => $task['deadline'],
         ];
     }
     ?>
 
-    <!-- Echoing out tasks using foreach, one to echo out them all, another to sort them into their lists -->
+
+
+    <!-- Echoing out tasks using foreach, one to echo out them all,
+     another to sort them with their lists -->
     <?php
 
     foreach ($lists as $title => $tasks) :
@@ -50,7 +55,13 @@
             foreach ($tasks as $task) :
             ?>
                 <ul>
-                    <li><?= $task['taskTitle']; ?> X</li>
+                    <input type="checkbox">
+                    <b><?= $task['taskTitle']; ?></b>
+                    <i> <?= $task['taskDescription']; ?>
+                        <?= $task['taskDeadline']; ?>
+                        <a href="#"><img src="/assets/images/edit.svg"></a></li>
+                    </i>
+                    </li>
                     <li style="display: none;">
                         <div>
 
