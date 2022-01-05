@@ -23,38 +23,46 @@
 
     <!-- Echoing out our lists using foreach -->
     <?php
-    $lists = showLists($database);
+    // $lists = showLists($database);
 
-    foreach ($lists as $list) :
-        $list['title']; ?>
+    $fetchAllTasks = fetchAllTasks($database);
+    foreach ($fetchAllTasks as $key => $task) {
+        $lists[$task['listTitle']][] = [
+            'listTitle' => $task['listTitle'],
+            'taskTitle' => $task['taskTitle'],
+            'listId' => $task['listId'],
+        ];
+    }
+    ?>
 
+    <!-- Echoing out tasks using foreach, one to echo out them all, another to sort them into their lists -->
+    <?php
+
+    foreach ($lists as $title => $tasks) :
+    ?>
         <div class="lists-box">
-            <p class=“list”>
-            <h2><?php echo $list['title'] ?></h2>
+            <p class="list">
+                <?= $title; ?>
             </p>
 
-            <!-- Echoing out all tasks -->
-
-            <?php $fetchAllTasks = fetchAllTasks($database);
-
-            $list = [];
-            foreach ($fetchAllTasks as $task) {
-                $list = [
-                    $task[$list['list_id']] =
-                        [
-                            'id' => '',
-                            'title' => '',
-                            'description' => '',
-                            'deadline' => ''
-                        ]
-                ];
-            } ?>
             <?php
 
-            foreach ($lists['$task'] as $list) :
+            foreach ($tasks as $task) :
+            ?>
+                <ul>
+                    <li><?= $task['taskTitle']; ?> X</li>
+                    <li style="display: none;">
+                        <div>
 
-            endforeach; ?>
+                        </div>
+                    </li>
+                </ul>
+            <?php
+            endforeach;
 
+            ?>
+
+            <!-- Echoing out all tasks -->
 
             <div>
                 <!-- Form to add task(hidden if you haven't pressed the button below) -->
@@ -76,9 +84,9 @@
                         <small class="form-text">Please choose your deadline for your task.</small>
                     </div>
 
-                    <input type="hidden" name="list_id" value="<?php echo $list['id'] ?>">
+                    <input type="hidden" name="list_id" value="<?= $tasks[0]['listId']; ?>">
                     <button type="submit" class="btn btn-secondary">Save task</button>
-
+                    <!--    <?= $tasks[0]['listId']; ?> -->
 
                 </form>
             </div>
@@ -88,4 +96,5 @@
     ?>
 
 </article>
+
 <?php require __DIR__ . '/views/footer.php'; ?>

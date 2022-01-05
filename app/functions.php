@@ -28,15 +28,11 @@ function showLists($database)
 function fetchAllTasks($database): array
 {
 
-    $sql = $database->prepare('SELECT lists.*, tasks.* FROM tasks JOIN lists on tasks.list_id = lists.id WHERE lists.user_id = :id');
+    $sql = $database->prepare('SELECT lists.*, lists.title as listTitle, lists.id as listId, tasks.*, tasks.title as taskTitle FROM lists LEFT JOIN tasks on lists.id = tasks.list_id WHERE lists.user_id = :id');
     $sql->bindParam(':id', $_SESSION['user']['id'], PDO::PARAM_INT);
     $sql->execute();
 
     $allTasks = $sql->fetchAll(PDO::FETCH_ASSOC);
+
     return $allTasks;
 }
-
-
-/* "SELECT lists.*, tasks.* FROM tasks JOIN lists ON tasks.list_id = lists.id WHERE tasks.user_id = SESSION ID"
-    // echo showLists($database); -->
- */
