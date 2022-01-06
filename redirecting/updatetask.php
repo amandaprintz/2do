@@ -1,32 +1,45 @@
 <?php require __DIR__ . '/../app/autoload.php'; ?>
 <?php require __DIR__ . '/../views/header.php'; ?>
+
 <?php require __DIR__ . '/../app/messages.php'; ?>
+
+<!-- Fetch id for specific task -->
+<?php $id = $_GET['taskId']; ?>
+
+<?php $task = getTaskById($database, $id); ?>
 
 
 <h1>Edit your chosen task</h1> <br>
 
 <!-- Form: update task -->
 
+<!-- Title -->
 <form action=" /../app/tasks/updatetask.php" method="post">
     <div class="mb-3">
         <label for="title">Title </label>
-        <input class="form-control" type="name" name="title" id="title" placeholder="write new task title here" required>
+        <input class="form-control" type="name" name="title" id="title" value="<?= $task['title']; ?> ">
         <small class="form-text">Please fill in a title for your task.</small>
-        <button name="title" type="submit" class="btn btn-secondary">Change my title</button>
+        <input type="hidden" value="<?= $task['id'] ?>" name="id">
 
     </div>
+    <!-- Description -->
+
     <div class="mb-3">
         <label for="tasks">Description</label>
-        <input class="form-control" type="description" name="description" id="description" placeholder="write task description" required>
+        <input class="form-control" type="description" name="description" id="description" value=" <?php echo $task['description'] ?>">
         <small class="form-text">Please fill in a description for your task</small>
-        <button name="description" type="submit" class="btn btn-secondary">Change my description</button>
-
     </div>
+
+
+    <!-- Deadline -->
+
+
     <div class="mb-3">
         <label for="deadline">Deadline</label>
-        <input class="form-control" type="date" name="deadline" id="deadline">
+        <input class="form-control" type="date" name="deadline" value="<?= $task['deadline']; ?>" id="deadline">
         <small class="form-text">Please choose your deadline for your task.</small>
-        <button name="deadline" type="submit" class="btn btn-secondary">Change my deadline</button>
+        <br>
+        <button name="deadline" type="submit" class="btn btn-secondary">Save changes</button>
     </div>
 </form>
 
@@ -35,16 +48,3 @@
     <input type="hidden" value="<?= $listItem['id'] ?>" name="id" />
     <button type="submit" class="btn btn-danger">Delete your task</button>
 </form>
-
-
-
-<!-- Message if your updates were successful or failed -->
-<?php if ($error !== '') : ?>
-    <p class="error"><?= $error; ?></p>
-<?php endif; ?>
-
-<?php if ($message !== '') : ?>
-    <p class="success"><?php echo $message; ?></p>
-<?php endif; ?>
-
-<?php require __DIR__ . '/../views/footer.php'; ?>

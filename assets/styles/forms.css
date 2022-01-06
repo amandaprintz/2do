@@ -15,6 +15,7 @@
 
 .edit-btn {
   background-color: transparent;
+  border: none;
 }
 
 /* CSS for checkboxes */

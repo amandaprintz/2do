@@ -5,25 +5,27 @@ declare(strict_types=1);
 require __DIR__ . '/../autoload.php';
 
 
-if (isset($_POST['id'], $_POST['title'], $_POST['task'], $_POST['deadline'])) {
+
+/* Logic to update a task */
+if (isset($_POST['title'], $_POST['description'], $_POST['deadline'], $_POST['id'])) {
     $title = trim(filter_var($_POST['title'], FILTER_SANITIZE_STRING));
-    $taskId = trim(filter_var($_POST['id'], FILTER_SANITIZE_NUMBER_INT));
-    $taskTitle = trim(filter_var($_POST['task'], FILTER_SANITIZE_STRING));
-    $taskId = trim(filter_var($_POST['id'], FILTER_SANITIZE_NUMBER_INT));
-    $taskDeadline = trim(filter_var($_POST['deadline'], FILTER_SANITIZE_STRING));
-    $taskId = trim(filter_var($_POST['id'], FILTER_SANITIZE_NUMBER_INT));
+    $description = trim(filter_var($_POST['description'], FILTER_SANITIZE_STRING));
+    $deadline = trim(filter_var($_POST['deadline'], FILTER_SANITIZE_STRING));
+    $id = trim(filter_var($_POST['id'], FILTER_SANITIZE_STRING));
 
-    $sql = $database->prepare('UPDATE tasks SET title = :title, description = :task, deadline = :deadline  WHERE id = :id');
-
-
+    $sql = $database->prepare("UPDATE tasks SET title = :title, description = :description, deadline = :deadline WHERE id = :id");
     $sql->bindParam(':title', $title, PDO::PARAM_STR);
-    $sql->bindParam(':task', $taskTitle, PDO::PARAM_STR);
-    $sql->bindParam(':deadline', $taskDeadline, PDO::PARAM_STR);
-
-
-    $sql->bindParam(':id', $taskId, PDO::PARAM_INT);
+    $sql->bindParam(':description', $description, PDO::PARAM_STR);
+    $sql->bindParam(':deadline', $deadline, PDO::PARAM_STR);
+    $sql->bindParam(':id', $id, PDO::PARAM_STR);
 
     $sql->execute();
 }
+$sql->bindParam(':deadline', $taskDeadline, PDO::PARAM_STR);
 
-redirect('/mylists.phps');
+
+
+redirect('/mylists.php');
+
+
+redirect('/');

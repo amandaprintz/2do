@@ -33,6 +33,7 @@
             'listId' => $task['listId'],
             'taskDescription' => $task['taskDescription'],
             'taskDeadline' => $task['deadline'],
+            'taskID' => $task['taskID'],
         ];
     }
     ?>
@@ -59,18 +60,22 @@
                         <b> <?= $task['taskTitle']; ?></b>
                         <i><?= $task['taskDescription']; ?>
                             <?= $task['taskDeadline']; ?>
-                            <form action="/redirecting/updatetask.php" method="post">
-                                <input type="hidden" value="<?= $listItem['id'] ?>" name="id" />
+                            <!-- Btn for edit -->
+
+                            <a href="/redirecting/updatetask.php?taskId=<?= $task['taskID']; ?>"><img src="/assets/images/edit.svg"></a>
+
+
+
+
+
+                            <!-- <form action="/redirecting/updatetask.php" method="post">
+                                <input type="hidden" value="" name="id" />
                                 <button type="submit" class="edit-btn">
                                     <img src="/assets/images/edit.svg">
                                 </button>
-                            </form>
-
-
+                            </form> -->
                         </i>
                     </p>
-
-
                 </ul>
             <?php
             endforeach;
