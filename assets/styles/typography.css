@@ -31,7 +31,6 @@ h2 {
   font-size: 3rem;
 }
 
-p,
 .form-text,
 label,
 input,
@@ -40,7 +39,17 @@ button {
   font-size: 16.5px;
 }
 
-p.list {
+.list {
   font-family: Syne;
   font-size: 1.5rem;
+}
+
+.today {
+  font-family: Questrial;
+  font-size: 16.5px;
+}
+
+.login-intro p {
+  font-family: Questrial;
+  font-size: 1.2rem;
 }

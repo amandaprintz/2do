@@ -6,14 +6,16 @@
 
     <div class="login-intro">
         <?php if (isset($_SESSION['user'])) : ?>
-            <p>Welcome, <?php echo $_SESSION['user']['username']; ?>! </p>
-
+            <h2>Welcome, <?php echo $_SESSION['user']['username']; ?>! </h2>
+            <p> <?php echo "Today is " . date("l jS \of F Y "); ?>
+            <p>These are your plans and tasks for today. </p>
+            </p>
         <?php endif;
         ?>
+    </div>
 
     </div>
-    <!--     <p>Go to the tab My Lists to begin planning.</p>
- -->
+
 </article>
 
 <?php require __DIR__ . '/views/footer.php'; ?>

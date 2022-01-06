@@ -24,7 +24,7 @@
     <div class="mb-3">
         <label for="email">Update your email-address</label>
         <input class="form-control" type="email" name="email" id="email" placeholder="add your new email" required>
-        <small class=" form-text">Please write your email address.</small>
+        <small class=" form-text">Please write your new email address.</small>
         <button type="submit" class="btn btn-secondary">Update email</button>
     </div>
 </form>
@@ -34,7 +34,7 @@
     <div class="mb-3">
         <label for="email">Update your password</label>
         <input class="form-control" type="password" name="password" id="password" placeholder="add your new password" required>
-        <small class="form-text">Please write your email address.</small>
+        <small class="form-text">Please write your new password.</small>
         <button type="submit" class="btn btn-secondary">Update password</button>
 
     </div>

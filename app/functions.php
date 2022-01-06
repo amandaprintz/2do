@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-/* Funktion: redirecting string.  */
+/* Function: redirecting string.  */
 function redirect(string $path)
 {
     header("Location: ${path}");
     exit;
 }
 
-/* Function to show the lists that's inserted in the database on
+/* Function: show the lists that's inserted in the database on
 the actual webpage in the browser */
 
 function showLists($database)

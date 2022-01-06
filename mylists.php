@@ -8,7 +8,7 @@
     <p>Add your lists with your tasks here</p>
     <br>
     <!-- Form to add a list -->
-    <form action="/app/tasks/addlist.php" method="post">
+    <form action="/app/lists/createlist.php" method="post">
         <div class="mb-3">
             <label for="title">
                 <h2>Add new list</h2>
@@ -46,27 +46,31 @@
     foreach ($lists as $title => $tasks) :
     ?>
         <div class="lists-box">
-            <p class="list">
+            <div class="list">
                 <?= $title; ?>
-            </p>
+            </div>
 
             <?php
 
             foreach ($tasks as $task) :
             ?>
                 <ul>
-                    <input type="checkbox">
-                    <b><?= $task['taskTitle']; ?></b>
-                    <i> <?= $task['taskDescription']; ?>
-                        <?= $task['taskDeadline']; ?>
-                        <a href="#"><img src="/assets/images/edit.svg"></a></li>
-                    </i>
-                    </li>
-                    <li style="display: none;">
-                        <div>
+                    <p> <input type="checkbox">
+                        <b> <?= $task['taskTitle']; ?></b>
+                        <i><?= $task['taskDescription']; ?>
+                            <?= $task['taskDeadline']; ?>
+                            <form action="/redirecting/updatetask.php" method="post">
+                                <input type="hidden" value="<?= $listItem['id'] ?>" name="id" />
+                                <button type="submit" class="edit-btn">
+                                    <img src="/assets/images/edit.svg">
+                                </button>
+                            </form>
 
-                        </div>
-                    </li>
+
+                        </i>
+                    </p>
+
+
                 </ul>
             <?php
             endforeach;
@@ -77,8 +81,10 @@
 
             <div>
                 <!-- Form to add task(hidden if you haven't pressed the button below) -->
+
                 <button class="btn btn-secondary show-form">Add a task</button>
-                <form action="/app/tasks/tasks.php" method="post" class="hidden">
+                <!--   <a href="/update/updatelist.php"> <button class="btn btn-secondary">Edit list</button></a> -->
+                <form action=" /../app/tasks/createtask.php" method="post" class="hidden">
                     <div class="mb-3">
                         <label for="title">Title </label>
                         <input class="form-control" type="name" name="title" id="title" placeholder="write task title here" required>
@@ -98,8 +104,8 @@
                     <input type="hidden" name="list_id" value="<?= $tasks[0]['listId']; ?>">
                     <button type="submit" class="btn btn-secondary">Save task</button>
                     <!--    <?= $tasks[0]['listId']; ?> -->
-
                 </form>
+
             </div>
         </div>
 

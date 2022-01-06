@@ -11,9 +11,6 @@ if (isset($_POST['title'], $_POST['description'], $_POST['deadline'], $_POST['li
     $deadline = trim(filter_var($_POST['deadline'], FILTER_SANITIZE_STRING));
     $id = trim(filter_var($_POST['list_id'], FILTER_SANITIZE_STRING));
 
-    /* lagt till list_id men for felmeddelande - varför? */
-
-
 
     $sql = $database->prepare("INSERT INTO tasks (title, description, deadline, list_id) VALUES (:title, :description, :deadline, :list_id)");
     $sql->bindParam(':title', $title, PDO::PARAM_STR);
