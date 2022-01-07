@@ -38,7 +38,7 @@
         <input class="form-control" type="date" name="deadline" value="<?= $task['deadline']; ?>" id="deadline">
         <small class="form-text">Please choose your deadline for your task.</small>
         <br>
-        <button name="deadline" type="submit" class="btn btn-secondary">Save changes</button>
+        <button name="task" type="submit" class="btn btn-secondary">Save changes</button>
     </div>
 </form>
 

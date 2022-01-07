@@ -55,9 +55,9 @@
             foreach ($tasks as $task) : ?>
                 <ul>
                     <p> <input type="checkbox">
-                        <b> <?= $task['taskTitle']; ?></b>
-                        <i><?= $task['taskDescription']; ?>
-                            <?= $task['taskDeadline']; ?>
+                        <b> <?= $task['taskTitle']; ?> |</b>
+                        <?= $task['taskDescription']; ?>
+                        <i> <?= $task['taskDeadline']; ?>
                             <!-- Pen-btn redirecting to edit task page-->
                             <a href="/redirecting/updatetask.php?taskId=<?= $task['taskID']; ?>"><img src="/assets/images/edit.svg"></a>
 
@@ -67,16 +67,16 @@
                 </ul>
             <?php
             endforeach;
-
             ?>
 
             <!-- Echoing out all tasks -->
 
             <div>
-                <!-- Form to add task(hidden if you haven't pressed the button below) -->
+                <!-- Form to add task(hidden form if you haven't pressed the button below) -->
 
                 <button class="btn btn-secondary show-form">Add a task</button>
-                <button class="btn btn-secondary"><a href="/redirecting/updatelist.php?listId=<?= $task['listId']; ?>"><img src="/assets/images/edit.svg"></button></a>
+                <!-- Btn to edit a list -->
+                <button class="btn btn-secondary"> <a href="/redirecting/updatelist.php?listId=<?= $task['listId']; ?>">Edit list</button></a>
                 <form action=" /../app/tasks/createtask.php" method="post" class="hidden">
                     <div class="mb-3">
                         <label for="title">Title </label>

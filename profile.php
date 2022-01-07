@@ -8,7 +8,7 @@
     <img src="upload/<?php echo $_SESSION['user']['image_url'] ?>">
 </div>
 <!-- Form: update profile pic-->
-<form action="/app/users/editavatar.php" method="post" enctype="multipart/form-data">
+<form action=" /app/users/editavatar.php" method="post" enctype="multipart/form-data">
 
     <div class="mb-3">
         <label for="avatar">Edit profile picture</label>
@@ -17,8 +17,7 @@
         <small class="form-text"> Your picture can be either a jpg, jpeg or png. </small>
     </div>
     <button name="picture" type="submit" class="btn btn-secondary">Change my image</button>
-</form>
-<br>
+</form><br>
 <!-- Form: update email-->
 <form name="email" action="/app/users/editemail.php" method="post" enctype="multipart/form-data">
     <div class="mb-3">

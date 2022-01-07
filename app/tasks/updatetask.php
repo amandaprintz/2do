@@ -5,7 +5,6 @@ declare(strict_types=1);
 require __DIR__ . '/../autoload.php';
 
 /* Logic:update a task */
-/* -- NOT DONE */
 if (isset($_POST['title'], $_POST['description'], $_POST['deadline'], $_POST['id'])) {
     $title = trim(filter_var($_POST['title'], FILTER_SANITIZE_STRING));
     $description = trim(filter_var($_POST['description'], FILTER_SANITIZE_STRING));
@@ -20,7 +19,6 @@ if (isset($_POST['title'], $_POST['description'], $_POST['deadline'], $_POST['id
 
     $sql->execute();
 }
-$sql->bindParam(':deadline', $taskDeadline, PDO::PARAM_STR);
 
 
 
