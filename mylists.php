@@ -54,10 +54,11 @@
 
             foreach ($tasks as $task) : ?>
                 <ul>
-                    <p> <input type="checkbox">
-                        <b> <?= $task['taskTitle']; ?> |</b>
+
+                    <p> <b> <?= $task['taskTitle']; ?> |</b>
                         <?= $task['taskDescription']; ?>
                         <i> <?= $task['taskDeadline']; ?>
+
                             <!-- Pen-btn redirecting to edit task page-->
                             <a href="/redirecting/updatetask.php?taskId=<?= $task['taskID']; ?>"><img src="/assets/images/edit.svg"></a>
 

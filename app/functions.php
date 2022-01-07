@@ -24,7 +24,7 @@ function showLists($database)
 }
 
 
-/* Function to show tasks */
+/* Function: show all tasks */
 function fetchAllTasks($database): array
 {
 
@@ -37,7 +37,7 @@ function fetchAllTasks($database): array
     return $allTasks;
 }
 
-/* Function to get to a specific task:
+/* Function: get to a specific task:
 not renaming them since we've already got unique values */
 
 function getTaskById($database, $id): array
@@ -58,7 +58,7 @@ function getTaskById($database, $id): array
     return $task;
 }
 
-/* Function to get a specific list:
+/* Function: get a specific list:
  also not renaming since we've got unique values */
 
 function getListById($database, $id): array
@@ -79,7 +79,7 @@ function getListById($database, $id): array
     return $list;
 }
 
-
+/* Function: go get all tasks with a deadline today */
 
 
 function getTodaysTask(PDO $database): array

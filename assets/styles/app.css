@@ -50,6 +50,12 @@ body {
   font-size: 1.5rem;
 }
 
+.welcomeBox {
+  background-color: #363636;
+  padding: 20px;
+  margin-top: 30px;
+}
+
 /* CSS MY LIST: Lists and tasks */
 
 .lists-box {
