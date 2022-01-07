@@ -9,17 +9,15 @@
         <?php if (isset($_SESSION['user'])) : ?>
             <h2>Welcome, <?php echo $_SESSION['user']['username']; ?>! </h2>
             <p> <?php echo "Today is " . date("l jS \of F Y "); ?>
-
             </p>
-        <?php endif;
-        ?>
-    </div>
+
+            <div class="welcome-box">
+                <p>These are your plans and tasks for today. </p>
 
 
-    <div class="welcomeBox">
-        <p>These are your plans and tasks for today. </p>
-    </div>
-
+            <?php endif;
+            ?>
+            </div>
 
 
 

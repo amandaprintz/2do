@@ -80,12 +80,10 @@ function getListById($database, $id): array
 }
 
 /* Function: go get all tasks with a deadline today */
-
-
-function getTodaysTask(PDO $database): array
+/* --NOT DONE */
+function getTodaysTasks(PDO $database): array
 {
     $today = date("Y-m-d");
-
     $sql = $database->prepare('SELECT * FROM tasks WHERE deadline = :deadline AND user_id =:id');
     $sql->bindParam(':id', $_SESSION['user']['id'], PDO::PARAM_INT);
     $sql->bindParam(':deadline', $today);
