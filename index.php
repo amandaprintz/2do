@@ -24,9 +24,9 @@
                         <i> <?= $task['deadline']; ?>
                     </ul>
                 <?php endforeach; ?>
-
+            <?php endif; ?>
             </div>
-        <?php endif; ?>
+
 
 
 

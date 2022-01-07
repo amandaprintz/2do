@@ -4,9 +4,15 @@
 
 
 <h1>Edit your profile</h1> <br>
-<div class="edit-profile">
-    <img src="upload/<?php echo $_SESSION['user']['image_url'] ?>">
-</div>
+<?php if (isset($_SESSION['user']['image_url'])) : ?>
+    <div class="edit-profile">
+        <img src="upload/<?php echo $_SESSION['user']['image_url'] ?>">
+    </div>
+<?php else : ?>
+    <div class="edit-profile">
+        <img src="/assets/images/icon.png">
+    </div>
+<?php endif; ?>
 <!-- Form: update profile pic-->
 <form action=" /app/users/editavatar.php" method="post" enctype="multipart/form-data">
 

@@ -57,11 +57,10 @@
                         <p> <b> <?= $task['taskTitle']; ?> </b>
                             <?= $task['taskDescription']; ?>
                             <i> <?= $task['taskDeadline']; ?>
-                                <!-- Trying to fix pen -->
-                                <!--   <?php if (sizeof($fetchAllTasks) > 0) {  ?> -->
-                                <!-- Pen-btn redirecting to edit task page-->
-                                <a href="/redirecting/updatetask.php?taskId=<?= $task['taskID']; ?>"><img src="/assets/images/edit.svg"></a>
-                                <!--       <?php } ?> -->
+                                <!-- If-statement who  -->
+                                <?php if ($task['taskID'] !== null) {  ?>
+                                    <a href="/redirecting/updatetask.php?taskId=<?= $task['taskID']; ?>"><img src="/assets/images/edit.svg"></a>
+                                <?php } ?>
                             </i>
                         </p>
                     </ul>
