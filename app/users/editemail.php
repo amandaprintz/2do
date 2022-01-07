@@ -6,7 +6,6 @@ require __DIR__ . '/../autoload.php';
 
 /* Logic: update email */
 if (isset($_POST['email'])) {
-
     $newEmail = $_POST['email'];
     $statement = $database->prepare('UPDATE users SET email = :email WHERE id = :id');
     $statement->bindParam(':id', $_SESSION['user']['id'], PDO::PARAM_STR);

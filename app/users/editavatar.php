@@ -9,7 +9,6 @@ require __DIR__ . '/../autoload.php';
 
 /* Logic:  upload & update profilbild. */
 if (isset($_POST['picture'], $_FILES['avatar'])) {
-
     $avatarImage = trim(filter_var($_FILES['avatar']['name'], FILTER_SANITIZE_STRING));
     $filename = $_SESSION['user']['id'] . $avatarImage;
     $destination =  __DIR__ . '/../../upload/' . $filename;

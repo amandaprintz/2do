@@ -37,16 +37,17 @@ function fetchAllTasks($database): array
     return $allTasks;
 }
 
-/* Function to get tasks, not renaming them since we already have values. */
+/* Function to get to a specific task:
+not renaming them since we've already got unique values */
 
 function getTaskById($database, $id): array
 {
 
     $sql = $database->prepare('SELECT * FROM tasks WHERE id = :id');
 
-    if (!$sql) {
+    /* if (!$sql) {
         die(var_dump($database->errorInfo()));
-    }
+    } */
 
     $sql->bindParam(':id', $id, PDO::PARAM_INT);
     $sql->execute();
@@ -55,4 +56,25 @@ function getTaskById($database, $id): array
     $task = $sql->fetch(PDO::FETCH_ASSOC);
 
     return $task;
+}
+
+/* Function to get a specific list:
+ also not renaming since we've got unique values */
+
+function getListById($database, $id): array
+{
+
+    $sql = $database->prepare('SELECT * FROM lists WHERE id = :id');
+
+    /*   if (!$sql) {
+        die(var_dump($database->errorInfo()));
+    }
+ */
+    $sql->bindParam(':id', $id, PDO::PARAM_INT);
+    $sql->execute();
+
+
+    $list = $sql->fetch(PDO::FETCH_ASSOC);
+
+    return $list;
 }

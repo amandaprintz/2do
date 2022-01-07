@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 require __DIR__ . '/../autoload.php';
 
-/* Logic for deleting a task */
+/* Logic: deleting a task */
 
 if (isset($_POST['id'])) {
     $taskID = filter_var($_POST['id'], FILTER_SANITIZE_NUMBER_INT);
@@ -16,4 +16,4 @@ if (isset($_POST['id'])) {
     $insertSQL->bindParam(':id', $taskID, PDO::PARAM_INT);
 }
 
-redirect('/');
+redirect('/mylists.php');

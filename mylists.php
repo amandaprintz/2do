@@ -44,8 +44,7 @@
      another to sort them with their lists -->
     <?php
 
-    foreach ($lists as $title => $tasks) :
-    ?>
+    foreach ($lists as $title => $tasks) : ?>
         <div class="lists-box">
             <div class="list">
                 <?= $title; ?>
@@ -53,27 +52,16 @@
 
             <?php
 
-            foreach ($tasks as $task) :
-            ?>
+            foreach ($tasks as $task) : ?>
                 <ul>
                     <p> <input type="checkbox">
                         <b> <?= $task['taskTitle']; ?></b>
                         <i><?= $task['taskDescription']; ?>
                             <?= $task['taskDeadline']; ?>
-                            <!-- Btn for edit -->
-
+                            <!-- Pen-btn redirecting to edit task page-->
                             <a href="/redirecting/updatetask.php?taskId=<?= $task['taskID']; ?>"><img src="/assets/images/edit.svg"></a>
 
 
-
-
-
-                            <!-- <form action="/redirecting/updatetask.php" method="post">
-                                <input type="hidden" value="" name="id" />
-                                <button type="submit" class="edit-btn">
-                                    <img src="/assets/images/edit.svg">
-                                </button>
-                            </form> -->
                         </i>
                     </p>
                 </ul>
@@ -88,7 +76,7 @@
                 <!-- Form to add task(hidden if you haven't pressed the button below) -->
 
                 <button class="btn btn-secondary show-form">Add a task</button>
-                <!--   <a href="/update/updatelist.php"> <button class="btn btn-secondary">Edit list</button></a> -->
+                <button class="btn btn-secondary"><a href="/redirecting/updatelist.php?listId=<?= $task['listId']; ?>"><img src="/assets/images/edit.svg"></button></a>
                 <form action=" /../app/tasks/createtask.php" method="post" class="hidden">
                     <div class="mb-3">
                         <label for="title">Title </label>

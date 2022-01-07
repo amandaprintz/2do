@@ -1,14 +1,13 @@
 <nav class="navbar navbar-expand-lg navbar-dark">
     <!-- Calling the profile imgage chosen for this specific user.  -->
-    <?php
-    if (isset($_SESSION['user']['image_url'])) :
-    ?>
+
+    <?php if (isset($_SESSION['user']['image_url'])) : ?>
         <div class="profile">
             <img src="upload/<?php echo $_SESSION['user']['image_url'] ?> ">
         </div>
     <?php endif;
     ?>
-    <!-- Showing the websites name and you are directed to the indez page when clicking on it.  -->
+    <!-- Showing the websites name and you are directed to the index page when clicking on it.  -->
     <a class="navbar-brand" href="http://localhost:8000/index.php"><?php echo $config['title']; ?></a>
 
     <!--     These links are visible when you are LOGGED IN. -->

@@ -1,6 +1,5 @@
 <?php require __DIR__ . '/../app/autoload.php'; ?>
 <?php require __DIR__ . '/../views/header.php'; ?>
-
 <?php require __DIR__ . '/../app/messages.php'; ?>
 
 <!-- Fetch id for specific task -->
@@ -45,6 +44,6 @@
 
 <!-- Form: delete task -->
 <form action="/app/tasks/deletetask.php" method="post">
-    <input type="hidden" value="<?= $listItem['id'] ?>" name="id" />
+    <input type="hidden" value="<?= $task['id'] ?>" name="id" />
     <button type="submit" class="btn btn-danger">Delete your task</button>
 </form>
