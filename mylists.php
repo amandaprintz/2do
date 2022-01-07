@@ -23,7 +23,6 @@
 
     <!-- Echoing out our lists using foreach -->
     <?php
-    // $lists = showLists($database);
 
     $fetchAllTasks = fetchAllTasks($database);
     foreach ($fetchAllTasks as $key => $task) {
@@ -42,67 +41,70 @@
 
     <!-- Echoing out tasks using foreach, one to echo out them all,
      another to sort them with their lists -->
+
+    <?php if (sizeof($fetchAllTasks) > 0) {
+
+        foreach ($lists as $title => $tasks) : ?>
+            <div class="lists-box">
+                <div class="list">
+                    <?= $title; ?>
+                </div>
+
+                <?php
+
+                foreach ($tasks as $task) : ?>
+                    <ul>
+                        <p> <b> <?= $task['taskTitle']; ?> </b>
+                            <?= $task['taskDescription']; ?>
+                            <i> <?= $task['taskDeadline']; ?>
+                                <!-- Trying to fix pen -->
+                                <!--   <?php if (sizeof($fetchAllTasks) > 0) {  ?> -->
+                                <!-- Pen-btn redirecting to edit task page-->
+                                <a href="/redirecting/updatetask.php?taskId=<?= $task['taskID']; ?>"><img src="/assets/images/edit.svg"></a>
+                                <!--       <?php } ?> -->
+                            </i>
+                        </p>
+                    </ul>
+                <?php
+                endforeach;
+                ?>
+
+                <!-- Echoing out all tasks -->
+
+                <div>
+                    <!-- Form to add task(hidden form if you haven't pressed the button below) -->
+                    <button class="btn btn-secondary show-form">Add a task</button>
+                    <!-- Btn to edit a list -->
+                    <button class="btn btn-secondary"> <a href="/redirecting/updatelist.php?listId=<?= $task['listId']; ?>">Edit list</button></a>
+                    <form action=" /../app/tasks/createtask.php" method="post" class="hidden">
+                        <div class="mb-3">
+                            <label for="title">Title </label>
+                            <input class="form-control" type="name" name="title" id="title" placeholder="write task title here" required>
+                            <small class="form-text">Please fill in a title for your task.</small>
+                        </div>
+                        <div class="mb-3">
+                            <label for="tasks">Description</label>
+                            <input class="form-control" type="description" name="description" id="description" placeholder="write task description" required>
+                            <small class="form-text">Please fill in a description for your task</small>
+                        </div>
+                        <div class="mb-3">
+                            <label for="deadline">Deadline</label>
+                            <input class="form-control" type="date" name="deadline" id="deadline">
+                            <small class="form-text">Please choose your deadline for your task.</small>
+                        </div>
+
+                        <input type="hidden" name="list_id" value="<?= $tasks[0]['listId']; ?>">
+                        <button type="submit" class="btn btn-secondary">Save task</button>
+                        <!--    <?= $tasks[0]['listId']; ?> -->
+                    </form>
+
+                </div>
+            </div>
+
+        <?php endforeach;
+        ?>
     <?php
-
-    foreach ($lists as $title => $tasks) : ?>
-        <div class="lists-box">
-            <div class="list">
-                <?= $title; ?>
-            </div>
-
-            <?php
-
-            foreach ($tasks as $task) : ?>
-                <ul>
-                    <p> <b> <?= $task['taskTitle']; ?> |</b>
-                        <?= $task['taskDescription']; ?>
-                        <i> <?= $task['taskDeadline']; ?>
-
-                            <!-- Pen-btn redirecting to edit task page-->
-                            <a href="/redirecting/updatetask.php?taskId=<?= $task['taskID']; ?>"><img src="/assets/images/edit.svg"></a>
-
-                        </i>
-                    </p>
-                </ul>
-            <?php
-            endforeach;
-            ?>
-
-            <!-- Echoing out all tasks -->
-
-            <div>
-                <!-- Form to add task(hidden form if you haven't pressed the button below) -->
-                <button class="btn btn-secondary show-form">Add a task</button>
-                <!-- Btn to edit a list -->
-                <button class="btn btn-secondary"> <a href="/redirecting/updatelist.php?listId=<?= $task['listId']; ?>">Edit list</button></a>
-                <form action=" /../app/tasks/createtask.php" method="post" class="hidden">
-                    <div class="mb-3">
-                        <label for="title">Title </label>
-                        <input class="form-control" type="name" name="title" id="title" placeholder="write task title here" required>
-                        <small class="form-text">Please fill in a title for your task.</small>
-                    </div>
-                    <div class="mb-3">
-                        <label for="tasks">Description</label>
-                        <input class="form-control" type="description" name="description" id="description" placeholder="write task description" required>
-                        <small class="form-text">Please fill in a description for your task</small>
-                    </div>
-                    <div class="mb-3">
-                        <label for="deadline">Deadline</label>
-                        <input class="form-control" type="date" name="deadline" id="deadline">
-                        <small class="form-text">Please choose your deadline for your task.</small>
-                    </div>
-
-                    <input type="hidden" name="list_id" value="<?= $tasks[0]['listId']; ?>">
-                    <button type="submit" class="btn btn-secondary">Save task</button>
-                    <!--    <?= $tasks[0]['listId']; ?> -->
-                </form>
-
-            </div>
-        </div>
-
-    <?php endforeach;
-    ?>
-
+    } ?>
 </article>
 
 <?php require __DIR__ . '/views/footer.php'; ?>
