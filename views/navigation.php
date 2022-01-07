@@ -22,7 +22,6 @@
         </li>
         <li> <a class="nav-link" href="/app/users/logout.php">Logout</a>
         </li>
-
         <!--     These links are visible when you are LOGGED OUT. -->
     <?php else : ?>
         <li class="nav-item">

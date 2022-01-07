@@ -45,10 +45,6 @@ function getTaskById($database, $id): array
 
     $sql = $database->prepare('SELECT * FROM tasks WHERE id = :id');
 
-    /* if (!$sql) {
-        die(var_dump($database->errorInfo()));
-    } */
-
     $sql->bindParam(':id', $id, PDO::PARAM_INT);
     $sql->execute();
 
@@ -66,10 +62,6 @@ function getListById($database, $id): array
 
     $sql = $database->prepare('SELECT * FROM lists WHERE id = :id');
 
-    /*   if (!$sql) {
-        die(var_dump($database->errorInfo()));
-    }
- */
     $sql->bindParam(':id', $id, PDO::PARAM_INT);
     $sql->execute();
 
@@ -80,11 +72,13 @@ function getListById($database, $id): array
 }
 
 /* Function: go get all tasks with a deadline today */
-/* --NOT DONE */
 function getTodaysTasks(PDO $database): array
 {
+    /* using the built-in date function to fetch the date of today */
     $today = date("Y-m-d");
-    $sql = $database->prepare('SELECT * FROM tasks WHERE deadline = :deadline AND user_id =:id');
+
+    $sql = $database->prepare('SELECT tasks.* FROM tasks LEFT JOIN lists ON tasks.list_id = lists.id WHERE deadline = :deadline AND user_id = :id;
+    ');
     $sql->bindParam(':id', $_SESSION['user']['id'], PDO::PARAM_INT);
     $sql->bindParam(':deadline', $today);
     $sql->execute();

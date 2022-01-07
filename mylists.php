@@ -50,21 +50,14 @@
                 <?= $title; ?>
             </div>
 
-
             <?php
 
             foreach ($tasks as $task) : ?>
                 <ul>
-                    <!--          <form action="/app/tasks/complete.php" method="POST">
-                        <input type="checkbox" name="is_completed" id="is_completed" <?= $isCompleted ? 'checked' : '' ?>>
-
-                        <label for="is_completed" -->
-
                     <p> <b> <?= $task['taskTitle']; ?> |</b>
                         <?= $task['taskDescription']; ?>
                         <i> <?= $task['taskDeadline']; ?>
-                            <!--  </label>
-                            </form> -->
+
                             <!-- Pen-btn redirecting to edit task page-->
                             <a href="/redirecting/updatetask.php?taskId=<?= $task['taskID']; ?>"><img src="/assets/images/edit.svg"></a>
 
@@ -79,7 +72,6 @@
 
             <div>
                 <!-- Form to add task(hidden form if you haven't pressed the button below) -->
-
                 <button class="btn btn-secondary show-form">Add a task</button>
                 <!-- Btn to edit a list -->
                 <button class="btn btn-secondary"> <a href="/redirecting/updatelist.php?listId=<?= $task['listId']; ?>">Edit list</button></a>

@@ -1,5 +1,7 @@
 <?php require __DIR__ . '/app/autoload.php'; ?>
 <?php require __DIR__ . '/views/header.php'; ?>
+<?php
+$taskToday = getTodaysTasks($database); ?>
 
 <article>
     <!--  <h1><?php echo $config['title']; ?></h1> -->
@@ -12,12 +14,20 @@
             </p>
 
             <div class="welcome-box">
-                <p>These are your plans and tasks for today. </p>
+                <h2>These are your plans and tasks for today. </h2>
+                <br>
 
+                <?php foreach ($taskToday as $task) : ?>
+                    <ul>
+                        <?= $task['title']; ?> |</b>
+                        <?= $task['description']; ?>
+                        <i> <?= $task['deadline']; ?>
+                    </ul>
+                <?php endforeach; ?>
 
-            <?php endif;
-            ?>
             </div>
+        <?php endif; ?>
+
 
 
 
