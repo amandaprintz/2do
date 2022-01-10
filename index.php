@@ -9,6 +9,7 @@
     <!-- A small welcome message to the user that just logged in -->
     <div class="login-intro">
         <?php if (isset($_SESSION['user'])) : ?>
+            <?php print_r($_SESSION); ?>
             <h2>Welcome, <?php echo $_SESSION['user']['username']; ?>! </h2>
             <p> <?php echo "Today is " . date("l jS \of F Y "); ?>
             </p>
@@ -24,14 +25,9 @@
                         <i> <?= $task['deadline']; ?>
                     </ul>
                 <?php endforeach; ?>
-            <?php endif; ?>
+
             </div>
-
-
-
-
-
-
+        <?php endif; ?>
 </article>
 
 <?php require __DIR__ . '/views/footer.php'; ?>

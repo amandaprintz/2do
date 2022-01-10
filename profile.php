@@ -9,7 +9,7 @@
         <img src="upload/<?php echo $_SESSION['user']['image_url'] ?>">
     </div>
 <?php else : ?>
-    <div class="edit-profile">
+    <div class="profile-placeholder">
         <img src="/assets/images/icon.png">
     </div>
 <?php endif; ?>

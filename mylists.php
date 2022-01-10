@@ -54,10 +54,10 @@
 
                 foreach ($tasks as $task) : ?>
                     <ul>
-                        <p> <b> <?= $task['taskTitle']; ?> </b>
+                        <p><b> <?= $task['taskTitle']; ?> </b><br>
                             <?= $task['taskDescription']; ?>
                             <i> <?= $task['taskDeadline']; ?>
-                                <!-- If-statement who  -->
+                                <!-- If-statement for edit icon -->
                                 <?php if ($task['taskID'] !== null) {  ?>
                                     <a href="/redirecting/updatetask.php?taskId=<?= $task['taskID']; ?>"><img src="/assets/images/edit.svg"></a>
                                 <?php } ?>

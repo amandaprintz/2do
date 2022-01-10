@@ -1,6 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark">
-    <!-- Calling the profile imgage chosen for this specific user.  -->
-
+    <!-- Calling the profile image chosen for this specific user if logged in.  -->
     <?php if (isset($_SESSION['user']['image_url'])) : ?>
         <div class="profile">
             <img src="/upload/<?php echo $_SESSION['user']['image_url'] ?> ">
@@ -10,7 +9,7 @@
     <!-- Showing the websites name and you are directed to the index page when clicking on it.  -->
     <a class="navbar-brand" href="http://localhost:8000"><?php echo $config['title']; ?></a>
 
-    <!--     These links are visible when you are LOGGED IN. -->
+    <!--     These links are visible if you are LOGGED IN. -->
     <ul class="navbar-nav">
         <li class="nav-item">
             <?php if (isset($_SESSION['user'])) : ?>
@@ -22,7 +21,7 @@
         </li>
         <li> <a class="nav-link" href="/app/users/logout.php">Logout</a>
         </li>
-        <!--     These links are visible when you are LOGGED OUT. -->
+        <!--     These links are visible if you are LOGGED OUT. -->
     <?php else : ?>
         <li class="nav-item">
             <a class="nav-link <?php echo $_SERVER['SCRIPT_NAME'] === '/index.php' ? 'active' : ''; ?>" href="/index.php">Home</a>
