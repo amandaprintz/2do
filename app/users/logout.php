@@ -6,10 +6,8 @@ require __DIR__ . '/../autoload.php';
 
 /* Finishing the users session and returns to the home page.*/
 
-/* unset($_SESSION['user']); */
-session_unset();
+unset($_SESSION['user']);
 
-
-session_destroy();
+/* session_destroy(); */
 
 redirect('/');

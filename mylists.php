@@ -54,8 +54,17 @@
 
                 foreach ($tasks as $task) : ?>
                     <ul>
-                        <p><b> <?= $task['taskTitle']; ?> </b><br>
-                            <?= $task['taskDescription']; ?>
+                        <!-- Form for checkbox show done/undone tasks-->
+                        <form class="tasksForm" method="post" action="/app/tasks/complete.php">
+                            <label for="checkbox"></label>
+                            <input type="checkbox" class="checkboxClass" name="checkbox" <?= $task['completed'] ? 'checked' : '' ?>>
+                            <input type="hidden" value="<?= $task['taskID'] ?>" name="id" />
+                            <button type="submit" class="hidden-submit">Hidden submit</button>
+                        </form>
+
+                        <p><b> <?= $task['taskTitle']; ?> </b> <br>
+                            <?= $task['taskDescription'];
+                            "&nbsp&nbsp" ?>
                             <i> <?= $task['taskDeadline']; ?>
                                 <!-- If-statement for edit icon -->
                                 <?php if ($task['taskID'] !== null) {  ?>

@@ -65,6 +65,10 @@ body {
   margin-top: 30px;
 }
 
+/* CSS hidden checkbox button */
+.hidden-submit {
+  display: none;
+}
 /* CSS MY LIST: Lists and tasks */
 
 .lists-box {
