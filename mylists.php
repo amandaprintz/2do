@@ -55,6 +55,7 @@
                 foreach ($tasks as $task) : ?>
                     <ul>
                         <!-- Form for checkbox show done/undone tasks-->
+                        <!-- Sooooo, it works in the database but it lookes fucked up, WHY -->
                         <form class="tasksForm" method="post" action="/app/tasks/complete.php">
                             <label for="checkbox"></label>
                             <input type="checkbox" class="checkboxClass" name="checkbox" <?= $task['completed'] ? 'checked' : '' ?>>

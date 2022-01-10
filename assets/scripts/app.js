@@ -14,7 +14,7 @@ if (taskForms.length !== 0) {
   setCheckboxEventListener(taskForms);
 }
 
-// funktion för att submitta formet
+// Function: submit form for checkbox
 function setCheckboxEventListener(forms) {
   forms.forEach((form) => {
     const checkbox = form.querySelector('.checkboxClass');
