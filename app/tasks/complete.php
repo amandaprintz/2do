@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 require __DIR__ . '/../autoload.php';
 
-// Om checkbox finns (är ibockad) sätter jag iscompleted. Is completed innehåller ett true/false beroende på om den är ibockad eller ej.
 // If checkbox is checked -> completed (true), if not false.
 $isCompleted = isset($_POST['checkbox']);
 
