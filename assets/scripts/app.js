@@ -8,18 +8,3 @@ buttons.forEach((button) => {
 });
 
 /* Script: checkbox forms */
-const taskForms = document.querySelectorAll('.tasksForm');
-
-if (taskForms.length !== 0) {
-  setCheckboxEventListener(taskForms);
-}
-
-// Function: submit form for checkbox
-function setCheckboxEventListener(forms) {
-  forms.forEach((form) => {
-    const checkbox = form.querySelector('.checkboxClass');
-    checkbox.addEventListener('click', () => {
-      form.submit();
-    });
-  });
-}

@@ -57,6 +57,10 @@ button {
   font-size: 16.5px;
 }
 
+.submitted-form {
+  text-decoration: line-through;
+}
+
 .list {
   font-family: Syne;
   font-size: 1.5rem;

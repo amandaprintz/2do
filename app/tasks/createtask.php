@@ -12,6 +12,7 @@ if (isset($_POST['title'], $_POST['description'], $_POST['deadline'], $_POST['li
     $id = trim(filter_var($_POST['list_id'], FILTER_SANITIZE_STRING));
 
 
+
     $sql = $database->prepare("INSERT INTO tasks (title, description, deadline, list_id) VALUES (:title, :description, :deadline, :list_id)");
     $sql->bindParam(':title', $title, PDO::PARAM_STR);
     $sql->bindParam(':description', $description, PDO::PARAM_STR);

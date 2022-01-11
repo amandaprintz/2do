@@ -5,7 +5,7 @@ declare(strict_types=1);
 require __DIR__ . '/../autoload.php';
 
 // If checkbox is checked -> completed (true), if not false.
-$isCompleted = isset($_POST['checkbox']);
+/* $isCompleted = isset($_POST['checkbox']);
 
 if (isset($_POST['id'])) {
     $id = $_POST['id'];
@@ -25,3 +25,4 @@ if (isset($_POST['id'])) {
 }
 
 redirect('/mylists.php');
+ */

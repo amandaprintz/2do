@@ -33,6 +33,7 @@
             'taskDescription' => $task['taskDescription'],
             'taskDeadline' => $task['deadline'],
             'taskID' => $task['taskID'],
+            'taskCompleted' => ['Completed']
         ];
     }
     ?>
@@ -55,13 +56,7 @@
                 foreach ($tasks as $task) : ?>
                     <ul>
                         <!-- Form for checkbox show done/undone tasks-->
-                        <!-- Sooooo, it works in the database but it lookes fucked up, WHY -->
-                        <form class="tasksForm" method="post" action="/app/tasks/complete.php">
-                            <label for="checkbox"></label>
-                            <input type="checkbox" class="checkboxClass" name="checkbox" <?= $task['completed'] ? 'checked' : '' ?>>
-                            <input type="hidden" value="<?= $task['taskID'] ?>" name="id" />
-                            <button type="submit" class="hidden-submit">Hidden submit</button>
-                        </form>
+
 
                         <p><b> <?= $task['taskTitle']; ?> </b> <br>
                             <?= $task['taskDescription'];
