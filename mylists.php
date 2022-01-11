@@ -45,7 +45,6 @@
      another to sort them with their lists -->
 
     <?php if (sizeof($fetchAllTasks) > 0) {
-
         foreach ($lists as $title => $tasks) : ?>
             <div class="lists-box">
                 <div class="list">
@@ -64,7 +63,7 @@
                                 <button type="submit" class="hidden-submit">Hidden submit</button>
                             </form><?= "&nbsp&nbsp" ?>
                         <?php } ?>
-                        <p><b> <?= $task['taskTitle']; ?> </b>
+                        <p><b> <?= $task['taskTitle']; ?></b> <?= "&nbsp&nbsp" ?>
                             <?= $task['taskDescription'];
                             "&nbsp&nbsp" ?>
                             <i> <?= $task['taskDeadline']; ?>
@@ -111,7 +110,6 @@
 
         <?php endforeach;
         ?>
-    <?php
-    } ?>
+    <?php  } ?>
 </article>
 <?php require __DIR__ . '/views/footer.php'; ?>

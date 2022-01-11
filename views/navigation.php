@@ -4,8 +4,7 @@
         <div class="profile">
             <img src="/upload/<?php echo $_SESSION['user']['image_url'] ?> ">
         </div>
-    <?php endif;
-    ?>
+    <?php endif; ?>
     <!-- Showing the websites name and you are directed to the index page when clicking on it.  -->
     <a class="navbar-brand" href="http://localhost:8000"><?php echo $config['title']; ?></a>
 

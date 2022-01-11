@@ -80,3 +80,18 @@ body {
 ul {
   display: flex;
 }
+
+.to-see {
+  margin-top: 40px;
+  color: #838282;
+}
+
+.to-see a {
+  margin-top: 40px;
+}
+
+.to-see a:hover {
+  margin-top: 40px;
+  color: #838282;
+  text-decoration: underline;
+}

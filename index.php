@@ -19,14 +19,21 @@
 
                 <?php foreach ($taskToday as $task) : ?>
                     <ul>
-                        <p>●</p> <?= "&nbsp&nbsp" ?><?= $task['title'];
-                                                    echo "&nbsp&nbsp" ?> </b>
-                        <i> <?= $task['description']; ?></i>
-                        <!-- <?= $task['deadline']; ?> -->
+                        <p>● <?= "&nbsp&nbsp" ?><?= $task['title'];
+                                                echo "&nbsp&nbsp&nbsp" ?> </b>
+                            <i> <?= $task['description']; ?></i>
+                            <!-- <?= $task['deadline']; ?> -->
                     </ul>
-
+                    </p>
                 <?php endforeach; ?>
 
+
+                <div class="to-see">
+
+
+
+                    <button class="btn btn-secondary"> <a href=/mylists.php>View all tasks</button></a>
+                </div>
             </div>
         <?php endif; ?>
 </article>
