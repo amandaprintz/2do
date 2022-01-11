@@ -19,13 +19,8 @@
 
                 <?php foreach ($taskToday as $task) : ?>
                     <ul>
-                        <!--  Checkbox for today's tasks-->
-                        <!--   <input type="checkbox" id="checkbox" name="checkbox">
-                        <input type="hidden" value="<?= $task['id'] ?>" name="id" />
-                        <label for="checkbox"></label> <?= "&nbsp&nbsp" ?>  -->
-
-                        <?= $task['title'];
-                        echo "&nbsp&nbsp" ?> </b>
+                        <p>●</p> <?= "&nbsp&nbsp" ?><?= $task['title'];
+                                                    echo "&nbsp&nbsp" ?> </b>
                         <i> <?= $task['description']; ?></i>
                         <!-- <?= $task['deadline']; ?> -->
                     </ul>

@@ -33,7 +33,8 @@
             'taskDescription' => $task['taskDescription'],
             'taskDeadline' => $task['deadline'],
             'taskID' => $task['taskID'],
-            'taskCompleted' => ['Completed']
+            'completed' => $task['completed'],
+
         ];
     }
     ?>
@@ -44,24 +45,30 @@
      another to sort them with their lists -->
 
     <?php if (sizeof($fetchAllTasks) > 0) {
+
         foreach ($lists as $title => $tasks) : ?>
             <div class="lists-box">
                 <div class="list">
                     <?= $title; ?>
                 </div>
 
-                <?php
-
-                foreach ($tasks as $task) : ?>
+                <?php foreach ($tasks as $task) : ?>
                     <ul>
-                        <!-- Form for checkbox show done/undone tasks-->
-
-
-                        <p><b> <?= $task['taskTitle']; ?> </b> <br>
+                        <!-- If-statement: show checkbox icon -->
+                        <?php if ($task['taskID'] !== null) {  ?>
+                            <!-- Form: checkbox-->
+                            <form class="tasksForm" method="post" action="/app/tasks/complete.php">
+                                <label for="checkbox"></label>
+                                <input type="checkbox" class="checkboxClass" name="checkbox" <?= $task['completed'] ? 'checked' : '' ?>>
+                                <input type="hidden" value="<?= $task['taskID'] ?>" name="id" />
+                                <button type="submit" class="hidden-submit">Hidden submit</button>
+                            </form><?= "&nbsp&nbsp" ?>
+                        <?php } ?>
+                        <p><b> <?= $task['taskTitle']; ?> </b>
                             <?= $task['taskDescription'];
                             "&nbsp&nbsp" ?>
                             <i> <?= $task['taskDeadline']; ?>
-                                <!-- If-statement for edit icon -->
+                                <!-- If-statement: show edit icon -->
                                 <?php if ($task['taskID'] !== null) {  ?>
                                     <a href="/redirecting/updatetask.php?taskId=<?= $task['taskID']; ?>"><img src="/assets/images/edit.svg"></a>
                                 <?php } ?>

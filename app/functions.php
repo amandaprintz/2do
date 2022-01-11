@@ -28,7 +28,7 @@ function showLists($database)
 function fetchAllTasks($database): array
 {
 
-    $sql = $database->prepare('SELECT lists.*, lists.title as listTitle, lists.id as listId, tasks.*, tasks.title as taskTitle, tasks.description as taskDescription, tasks.id as taskID FROM lists LEFT JOIN tasks on lists.id = tasks.list_id WHERE lists.user_id = :id');
+    $sql = $database->prepare('SELECT lists.*, lists.title as listTitle, lists.id as listId, tasks.*, tasks.title as taskTitle, tasks.description as taskDescription, tasks.id as taskID, tasks.completed as completed FROM lists LEFT JOIN tasks on lists.id = tasks.list_id WHERE lists.user_id = :id');
     $sql->bindParam(':id', $_SESSION['user']['id'], PDO::PARAM_INT);
     $sql->execute();
 

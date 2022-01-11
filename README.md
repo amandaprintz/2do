@@ -2,9 +2,7 @@
 
 # Project Title
 
-Christmas assignment to build a task management application built with mainly PHP. As a user you can save lists and tasks and get more organized. The assignment both uses PHP front-and backend coding since the application is build with a database to store the user's tasks and lists. Therefore PDO is used to access the database and present the results on each users personal page.
-<br>
-You can visit the site [here.](-add link)
+Christmas assignment to build a task management application built with mainly PHP. As a user you can save lists and tasks and get more organized. The assignment both uses PHP front-and backend coding since the application is build with a database to store the user's tasks and lists. Therefore PDO is used to access the database and present the results on each users personal page. You can visit the site [here.](-add link)
 
 # Installation
 
