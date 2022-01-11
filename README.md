@@ -2,15 +2,39 @@
 
 # Project Title
 
-Text about the project and why it exists. This would also be a great place to link the project online.
+Christmas assignment to build a task management application built with mainly PHP. As a user you can save lists and tasks and get more organized. The assignment both uses PHP front-and backend coding since the application is build with a database to store the user's tasks and lists. Therefore PDO is used to access the database and present the results on each users personal page.
+<br>
+You can visit the site [here.](-add link)
 
 # Installation
 
-Add the installation instructions.
+In order to do this you will need to have PHP installed on your computer.
+
+Install this project by following these steps:
+
+<b> Clone the repository from this address: </b>
+
+```
+https://github.com/amandaprintz/2do.git
+```
+
+<br>
+<b> In the project's root folder, start a php server by typing this in your terminal: </b>
+
+```
+php -S localhost:8000
+```
+
+  <br>
+<b> Open up your browser and paste this URL in the address bar: </b>
+
+```
+https://localhost:8000
+```
 
 # Code Review
 
-Code review written by [Jane Doh](https://github.com/username).
+Code review written by [Agnes Skönvall](https://github.com/agnesskonvall).
 
 1. `example.js:10-15` - Remember to think about X and this could be refactored using the amazing Y function.
 2. `example.js:10-15` - Remember to think about X and this could be refactored using the amazing Y function.

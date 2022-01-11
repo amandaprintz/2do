@@ -44,7 +44,6 @@
      another to sort them with their lists -->
 
     <?php if (sizeof($fetchAllTasks) > 0) {
-
         foreach ($lists as $title => $tasks) : ?>
             <div class="lists-box">
                 <div class="list">
@@ -69,9 +68,7 @@
                             </i>
                         </p>
                     </ul>
-                <?php
-                endforeach;
-                ?>
+                <?php endforeach; ?>
 
                 <!-- Echoing out all tasks -->
 
@@ -110,5 +107,4 @@
     <?php
     } ?>
 </article>
-
 <?php require __DIR__ . '/views/footer.php'; ?>
