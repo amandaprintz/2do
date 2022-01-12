@@ -1,0 +1,25 @@
+/* Global CSS */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(29, 29, 29);
+  color: white;
+  height: 100%;
+}
+
+/* for all display of lists / tasks */
+
+.lists-box {
+  background-color: #363636;
+  padding: 20px;
+  margin-bottom: 15px;
+}
+
+ul {
+  display: flex;
+}

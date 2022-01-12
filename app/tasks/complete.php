@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 require __DIR__ . '/../autoload.php';
 
-// If checkbox is checked -> completed (true), if not false.
+/* Logic: checkbox (if checked -> completed (true). */
 $isCompleted = isset($_POST['checkbox']);
 
 if (isset($_POST['id'])) {

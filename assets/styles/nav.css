@@ -1,0 +1,17 @@
+/* CSS navigation bar */
+.navbar {
+  background-color: rgb(54, 54, 54);
+}
+
+.navbar a {
+  color: lightgray;
+}
+
+.profile img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  object-position: center;
+  margin-right: 50px;
+  border-radius: 50%;
+}

@@ -7,7 +7,7 @@
     <h1>Lists & tasks</h1>
     <p>Add your lists with your tasks here</p>
     <br>
-    <!-- Form to add a list -->
+    <!-- Form: add a list -->
     <form action="/app/lists/createlist.php" method="post">
         <div class="mb-3">
             <label for="title">
@@ -38,9 +38,6 @@
         ];
     }
     ?>
-
-
-
     <!-- Echoing out tasks using foreach, one to echo out them all,
      another to sort them with their lists -->
 
@@ -53,7 +50,7 @@
 
                 <?php foreach ($tasks as $task) : ?>
                     <ul>
-                        <!-- If-statement: show checkbox icon -->
+                        <!-- If-statement: show/hide checkbox -->
                         <?php if ($task['taskID'] !== null) {  ?>
                             <!-- Form: checkbox-->
                             <form class="tasksForm" method="post" action="/app/tasks/complete.php">
@@ -67,7 +64,7 @@
                             <?= $task['taskDescription'];
                             "&nbsp&nbsp" ?>
                             <i> <?= $task['taskDeadline']; ?>
-                                <!-- If-statement: show edit icon -->
+                                <!-- If-statement: show/ hide edit icon -->
                                 <?php if ($task['taskID'] !== null) {  ?>
                                     <a href="/redirecting/updatetask.php?taskId=<?= $task['taskID']; ?>"><img src="/assets/images/edit.svg"></a>
                                 <?php } ?>
@@ -76,12 +73,10 @@
                     </ul>
                 <?php endforeach; ?>
 
-                <!-- Echoing out all tasks -->
-
                 <div>
-                    <!-- Form to add task(hidden form if you haven't pressed the button below) -->
+                    <!-- Form: add task(hidden form if you haven't pressed the button below) -->
                     <button class="btn btn-secondary show-form">Add a task</button>
-                    <!-- Btn to edit a list -->
+                    <!-- Btn: edit a list -->
                     <button class="btn btn-secondary"> <a href="/redirecting/updatelist.php?listId=<?= $task['listId']; ?>">Edit list</button></a>
                     <form action=" /../app/tasks/createtask.php" method="post" class="hidden">
                         <div class="mb-3">
@@ -104,7 +99,6 @@
                         <button type="submit" class="btn btn-secondary">Save task</button>
                         <!--    <?= $tasks[0]['listId']; ?> -->
                     </form>
-
                 </div>
             </div>
 

@@ -1,5 +1,4 @@
 <?php
-
 $message = $_SESSION['message'] ?? '';
 $error = $_SESSION['error'] ?? '';
 

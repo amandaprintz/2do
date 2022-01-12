@@ -3,11 +3,6 @@
   margin-top: 10px;
 }
 
-/* This class is specifik for the "Add-task"-form since its called with JS. */
-.hidden {
-  display: none;
-}
-
 .form-text {
   color: grey;
   margin-bottom: 5px;
@@ -18,4 +13,12 @@
   border: none;
 }
 
-/* CSS for checkboxes */
+/* for hidden checkbox button */
+.hidden-submit {
+  display: none;
+}
+
+/* for "Add-task"-form since its toggled using JS. */
+.hidden {
+  display: none;
+}

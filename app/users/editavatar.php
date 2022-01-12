@@ -7,7 +7,7 @@ require __DIR__ . '/../autoload.php';
 
 
 
-/* Logic:  upload & update profilbild. */
+/* Logic: upload & update profile picture. */
 if (isset($_POST['picture'], $_FILES['avatar'])) {
     $avatarImage = trim(filter_var($_FILES['avatar']['name'], FILTER_SANITIZE_STRING));
     $filename = $_SESSION['user']['id'] . $avatarImage;
@@ -22,7 +22,6 @@ if (isset($_POST['picture'], $_FILES['avatar'])) {
     $sql->execute();
 
     $sql = $database->prepare('SELECT * FROM users WHERE id = :id');
-
     $sql->bindParam(':id', $_SESSION['user']['id'], PDO::PARAM_INT);
 
     $sql->execute();

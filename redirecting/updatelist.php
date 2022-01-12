@@ -5,12 +5,9 @@
 <!-- Fetch id for specific list to edit -->
 <?php $id = $_GET['listId']; ?>
 <?php $list = getListById($database, $id); ?>
-
-
 <h1>Edit your list </h1> <br>
 
 <!-- Form: update title of list -->
-
 <form name="title" action="/app/lists/updatelist.php" method="post" enctype="multipart/form-data">
     <div class="mb-3">
         <label for="email">Update title of your chosen list</label>

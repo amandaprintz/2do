@@ -1,0 +1,19 @@
+/* CSS for profile.php */
+
+.edit-profile img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.profile-placeholder img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}

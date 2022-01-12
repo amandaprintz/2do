@@ -2,16 +2,14 @@
 
 declare(strict_types=1);
 
-/* Function: redirecting string.  */
+/* Function: redirecting string. */
 function redirect(string $path)
 {
     header("Location: ${path}");
     exit;
 }
 
-/* Function: show the lists that's inserted in the database on
-the actual webpage in the browser */
-
+/* Function: show all lists. */
 function showLists($database)
 {
     $sql = $database->prepare("SELECT * FROM lists WHERE user_id = :id");
@@ -24,7 +22,7 @@ function showLists($database)
 }
 
 
-/* Function: show all tasks */
+/* Function: show all tasks. */
 function fetchAllTasks($database): array
 {
 
@@ -37,9 +35,8 @@ function fetchAllTasks($database): array
     return $allTasks;
 }
 
-/* Function: get to a specific task:
+/* Function: get a specific task:
 not renaming them since we've already got unique values */
-
 function getTaskById($database, $id): array
 {
 
@@ -71,10 +68,10 @@ function getListById($database, $id): array
     return $list;
 }
 
-/* Function: go get all tasks with a deadline today */
+/* Function: get all tasks with current day deadline*/
 function getTodaysTasks(PDO $database): array
 {
-    /* using the built-in date function to fetch the date of today */
+    /* using built-in date function to fetch the date of today */
     $today = date("Y-m-d");
 
     $sql = $database->prepare('SELECT tasks.* FROM tasks LEFT JOIN lists ON tasks.list_id = lists.id WHERE deadline = :deadline AND user_id = :id;

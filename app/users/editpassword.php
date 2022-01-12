@@ -5,7 +5,6 @@ declare(strict_types=1);
 require __DIR__ . '/../autoload.php';
 
 /* Logic: update password */
-/* Checks if a current password exists and creates a new variable with a new password. */
 if (isset($_POST['password'])) {
     $newPassword = password_hash($_POST['password'], PASSWORD_DEFAULT);
     $statement = $database->prepare('UPDATE users SET password = :password WHERE id = :id');

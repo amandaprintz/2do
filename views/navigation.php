@@ -1,11 +1,11 @@
 <nav class="navbar navbar-expand-lg navbar-dark">
-    <!-- Calling the profile image chosen for this specific user if logged in.  -->
+    <!-- To show specific avatar for specific user if logged in.  -->
     <?php if (isset($_SESSION['user']['image_url'])) : ?>
         <div class="profile">
             <img src="/upload/<?php echo $_SESSION['user']['image_url'] ?> ">
         </div>
     <?php endif; ?>
-    <!-- Showing the websites name and you are directed to the index page when clicking on it.  -->
+    <!-- Showing the websites name and you are directed to the index page when clicking.  -->
     <a class="navbar-brand" href="http://localhost:8000"><?php echo $config['title']; ?></a>
 
     <!--     These links are visible if you are LOGGED IN. -->

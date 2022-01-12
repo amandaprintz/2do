@@ -13,7 +13,6 @@ if (isset($_POST['email'])) {
     $statement->execute();
 
     /* Message: lets us know if the email was successfully uploaded. */
-
     $_SESSION['message'] = 'Your email has updated successfully!';
     redirect('/profile.php');
 } else {

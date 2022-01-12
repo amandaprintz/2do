@@ -7,7 +7,7 @@ buttons.forEach((button) => {
   });
 });
 
-/* Script: checkbox forms */
+/* Script: checkbox form */
 const taskForms = document.querySelectorAll('.tasksForm');
 
 if (taskForms.length !== 0) {

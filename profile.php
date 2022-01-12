@@ -13,7 +13,7 @@
         <img src="/assets/images/icon.png">
     </div>
 <?php endif; ?>
-<!-- Form: update profile pic-->
+<!-- Form: update profile picture -->
 <form action=" /app/users/editavatar.php" method="post" enctype="multipart/form-data">
 
     <div class="mb-3">
@@ -45,7 +45,7 @@
     </div>
 
 </form>
-<!-- Message if your updates were successful or failed -->
+<!-- Message if your updates were successful -->
 <?php if ($error !== '') : ?>
     <p class="error"><?= $error; ?></p>
 <?php endif; ?>

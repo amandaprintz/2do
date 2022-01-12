@@ -4,14 +4,12 @@
 
 <!-- Fetch id for specific task -->
 <?php $id = $_GET['taskId']; ?>
-
 <?php $task = getTaskById($database, $id); ?>
 
 
 <h1>Edit your chosen task</h1> <br>
 
 <!-- Form: update task -->
-
 <!-- Title -->
 <form action=" /../app/tasks/updatetask.php" method="post">
     <div class="mb-3">
@@ -22,7 +20,6 @@
 
     </div>
     <!-- Description -->
-
     <div class="mb-3">
         <label for="tasks">Description</label>
         <input class="form-control" type="description" name="description" id="description" value=" <?php echo $task['description'] ?>">
@@ -31,8 +28,6 @@
 
 
     <!-- Deadline -->
-
-
     <div class="mb-3">
         <label for="deadline">Deadline</label>
         <input class="form-control" type="date" name="deadline" value="<?= $task['deadline']; ?>" id="deadline">

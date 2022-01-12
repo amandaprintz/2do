@@ -1,0 +1,17 @@
+/* CSS index.php */
+
+.login-intro p {
+  font-family: Questrial;
+  font-size: 1.5rem;
+}
+
+.welcome-box {
+  background-color: #363636;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+.to-see {
+  margin-top: 40px;
+  color: #838282;
+}
