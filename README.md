@@ -1,8 +1,68 @@
 <img src="https://media.giphy.com/media/1426nO2tbkJdBu/giphy.gif" width=100%>
 
-# Project Title
+# 2do
 
 Christmas assignment to build a task management application built with mainly PHP. As a user you can save lists and tasks and get more organized. The assignment both uses PHP front-and backend coding since the application is build with a database to store the user's tasks and lists. Therefore PDO is used to access the database and present the results on each users personal page. You can visit the site [here.](-add link)
+<br>
+<details>
+  <summary>Requirements</summary>
+  Below is the list of requirements for this assignment.
+
+ - The application should be written in HTML, CSS, JavaScript, SQL and PHP.
+
+- The application should be built using a SQLite database with at least three different tables.
+
+- The application should be pushed to a public repository on [GitHub](https://github.com/).
+
+- The application should be responsive and be built using the method mobile-first.
+
+- The application should be implement secure hashed passwords when signing up.
+
+- The project should implement an accessible graphical user interface.
+
+- The project should [declare strict types](https://www.php.net/manual/en/language.types.declarations.php.strict) in files containing only PHP code.
+
+- The project should not include any coding errors, warning or notices.
+</details>
+
+<details>
+ <summary>Features</summary>
+Below is the list of user stories. This is the behavior on how the user interact with the application.
+    
+- As a user I should be able to create an account.
+
+- As a user I should be able to login.
+
+- As a user I should be able to logout.
+
+- As a user I should be able to edit my account email and password.
+
+- As a user I should be able to upload a profile avatar image.
+
+- As a user I should be able to create new tasks with title, description and deadline date.
+
+- As a user I should be able to edit my tasks.
+
+- As a user I should be able to delete my tasks.
+
+- As a user I should be able to mark tasks as completed.
+
+- As a user I should be able to mark tasks as uncompleted.
+
+- As a user I'm able to create new task lists with title.
+
+- As a user I'm able to edit my task lists.
+
+- As a user I'm able to delete my task lists along with all tasks.
+
+- As a user I'm able to add a task to a list.
+
+- As a user I'm able to view all tasks.
+
+- As a user I'm able to view all tasks within a list.
+
+- As a user I'm able to view all tasks which should be completed today.
+</details>
 
 # Installation
 
@@ -47,7 +107,9 @@ Code review written by [Agnes Skönvall](https://github.com/agnesskonvall).
 
 #
 
--   <b> Update </b>  `navigation.php:8` has been changed into `<a class="navbar-brand" href="#">` . <br>
+-   <b> Update </b>  `navigation.php:8` has been changed into `<a class="navbar-brand" href="index.php">` . <br>
+-    <b> Update </b> `index.php:19`has been changed to a `-`. 
+
 
 # Testers
 
