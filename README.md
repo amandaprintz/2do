@@ -108,7 +108,8 @@ Code review written by [Agnes Skönvall](https://github.com/agnesskonvall).
 #
 
 -   <b> Update </b>  `navigation.php:8` has been changed into `<a class="navbar-brand" href="index.php">` . <br>
--    <b> Update </b> `index.php:19`has been changed to a `-`. 
+-   <b> Update </b> `index.php:19`has been changed to a `-`. 
+-   <b> Update </b> `mylists.php:41-42` this line has been removed.
 
 
 # Testers
