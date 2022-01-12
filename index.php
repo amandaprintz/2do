@@ -16,8 +16,8 @@
 
                 <?php foreach ($taskToday as $task) : ?>
                     <ul>
-                        <p>● <?= "&nbsp&nbsp" ?><?= $task['title'];
-                                                echo "&nbsp&nbsp" ?> </b>
+                        <p> - <?= "&nbsp&nbsp" ?><?= $task['title'];
+                                                    echo "&nbsp&nbsp" ?> </b>
                             <i> <?= $task['description']; ?></i>
                             <!-- <?= $task['deadline']; ?> -->
                     </ul>

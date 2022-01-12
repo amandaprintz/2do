@@ -6,7 +6,7 @@
         </div>
     <?php endif; ?>
     <!-- Showing the websites name and you are directed to the index page when clicking.  -->
-    <a class="navbar-brand" href="#"><?php echo $config['title']; ?></a>
+    <a class="navbar-brand" href="index.php"><?php echo $config['title']; ?></a>
 
     <!--     These links are visible if you are LOGGED IN. -->
     <ul class="navbar-nav">
