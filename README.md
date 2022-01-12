@@ -23,7 +23,7 @@ https://github.com/amandaprintz/2do.git
 php -S localhost:8000
 ```
 
-  <br>
+<br>
 <b> Open up your browser and paste this URL in the address bar: </b>
 
 ```
@@ -47,7 +47,7 @@ Code review written by [Agnes Skönvall](https://github.com/agnesskonvall).
 
 #
 
--   <b> Update `navigation.php:8` has been changed into `<a class="navbar-brand" href="#">` . <br>
+-   <b> Update </b>  `navigation.php:8` has been changed into `<a class="navbar-brand" href="#">` . <br>
 
 # Testers
 
