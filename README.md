@@ -34,16 +34,20 @@ https://localhost:8000
 
 Code review written by [Agnes Skönvall](https://github.com/agnesskonvall).
 
-1. `example.js:10-15` - Remember to think about X and this could be refactored using the amazing Y function.
-2. `example.js:10-15` - Remember to think about X and this could be refactored using the amazing Y function.
-3. `example.js:10-15` - Remember to think about X and this could be refactored using the amazing Y function.
-4. `example.js:10-15` - Remember to think about X and this could be refactored using the amazing Y function.
-5. `example.js:10-15` - Remember to think about X and this could be refactored using the amazing Y function.
-6. `example.js:10-15` - Remember to think about X and this could be refactored using the amazing Y function.
-7. `example.js:10-15` - Remember to think about X and this could be refactored using the amazing Y function.
-8. `example.js:10-15` - Remember to think about X and this could be refactored using the amazing Y function.
-9. `example.js:10-15` - Remember to think about X and this could be refactored using the amazing Y function.
-10. `example.js:10-15` - Remember to think about X and this could be refactored using the amazing Y function.
+1. `mylists.php:41-42` - Very readable code with comments, it’s easy to understand even at first glance. Although I’m not completely sure what the arrows on row 100 are for, perhaps a left over note for yourself?
+2. `index.php:8` - As I download the repo and open it on localhost, I’m seeing error messages. For example “Welcome, Warning: Undefined array key "username””. I really think you should have an else that shows something else when the user is not logged in. Perhaps an introduction to what the website does?
+3. `register.php:23-27` - Perhaps making the user repeat their password would be beneficial. For in cases like when the user misspells it when registering.
+4. `updatelist.php:22-25` - Deleting lists and tasks is permanent, how about adding a window alert to your delete-button? It’s now a very simple misclick and everything is gone! You can use the “onclick”-property for the button, no need for javascript! Keep it simple!
+5. `login.php:27-30` - You can save more variables for the user-session here, perhaps an image-url and and id? They might come in handy later!
+6. `navigation.php:8` - Don’t use links to localhost:8000. Not everyone uses 8000 for their localhost. You might also want to make your website live, this will be a problem!
+7. `navigation.php:15` - Save $\_SERVER['SCRIPT_NAME'] as a variable instead, it will make your code more readable!
+8. `mylists.php:52-73` - You’re using an ul-tag as if you’re making a list, but there are no list items - li-tags within it. It’s not very accessible. Perhaps use separate tags for the things you wish to display and get rid of the ul?
+9. `index.php:19` - The ● kind of looks like a checkbox. Perhaps a blacked out one or a dash would suffice as you’re using checkboxes in other places.
+10. `functions.php:72-85` - You’re using this function to display the tasks that are to be completed today, but it also shows the tasks that are completed. Consider adding to your query something to leave out the completed tasks!
+
+#
+
+-   <b> Update `navigation.php:8` has been changed into `<a class="navbar-brand" href="#">` . <br>
 
 # Testers
 
