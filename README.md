@@ -106,15 +106,16 @@ Code review written by [Agnes Skönvall](https://github.com/agnesskonvall).
 10. `functions.php:72-85` - You’re using this function to display the tasks that are to be completed today, but it also shows the tasks that are completed. Consider adding to your query something to leave out the completed tasks!
 
 #
-
--   <b> Update </b>  `navigation.php:8` has been changed into `<a class="navbar-brand" href="index.php">` . <br>
--   <b> Update </b> `index.php:19`has been changed to a `-`. 
--   <b> Update </b> `mylists.php:41-42` this line has been removed.
+<b> Updates post code review </b>  
+-  `navigation.php:8` has been changed into `<a class="navbar-brand" href="index.php">` . <br>
+-  `index.php:19`has been changed to a `-`. 
+-  `mylists.php:41-42` this line has been removed.
+-  `index.php:8` fixed. 
 
 
 # Testers
 
 Tested by the following people:
 
-1. Jane Doe
-2. John Doe
+1. Sophie Wulff
+2. Hanna Rosenberg
