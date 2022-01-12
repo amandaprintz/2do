@@ -97,7 +97,6 @@
 
                         <input type="hidden" name="list_id" value="<?= $tasks[0]['listId']; ?>">
                         <button type="submit" class="btn btn-secondary">Save task</button>
-                        <!--    <?= $tasks[0]['listId']; ?> -->
                     </form>
                 </div>
             </div>
