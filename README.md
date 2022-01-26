@@ -89,6 +89,10 @@ php -S localhost:8000
 ```
 https://localhost:8000
 ```
+# Wonderlist +
+
+- Delete account along with all its lists and tasks.
+- Move task from one list to another.
 
 # Code Review
 
