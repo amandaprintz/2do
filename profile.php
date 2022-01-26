@@ -43,8 +43,22 @@
         <button type="submit" class="btn btn-secondary">Update password</button>
 
     </div>
-
 </form>
+<!--Form: delete account-->
+<button type="submit" class="delete btn btn-secondary">Delete this account?</button>
+
+<section class="delete-user-form hidden">
+    <div class="delete-user">
+        <form action="/app/users/deleteuser.php" method="post" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="email">Password</label>
+                <input class="form-control" type="password" name="password" id="password" placeholder="Insert your password to delete your account" required>
+                <small class="form-text">This will delete your account along with all its lists and tasks.</small>
+                <button type="submit" class="btn btn-danger">Delete account</button>
+            </div>
+        </form>
+    </div>
+</section>
 <!-- Message if your updates were successful -->
 <?php if ($error !== '') : ?>
     <p class="error"><?= $error; ?></p>
