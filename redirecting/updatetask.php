@@ -6,7 +6,6 @@
 <?php $id = $_GET['taskId']; ?>
 <?php $task = getTaskById($database, $id); ?>
 
-
 <h1>Edit your chosen task</h1> <br>
 
 <!-- Form: update task -->
@@ -17,7 +16,6 @@
         <input class="form-control" type="name" name="title" id="title" value="<?= $task['title']; ?> ">
         <small class="form-text">Please fill in a title for your task.</small>
         <input type="hidden" value="<?= $task['id'] ?>" name="id">
-
     </div>
     <!-- Description -->
     <div class="mb-3">
@@ -32,6 +30,21 @@
         <label for="deadline">Deadline</label>
         <input class="form-control" type="date" name="deadline" value="<?= $task['deadline']; ?>" id="deadline">
         <small class="form-text">Please choose your deadline for your task.</small>
+    </div>
+    <!-- </form> -->
+
+    <!-- Change list logic goes here -->
+
+    <div class="mb-3">
+        <label for="list">Move task to set list</label>
+        <select name="list" id="list" class="form-control" id="list">
+            <option value="" disabled selected class="placeholder">Set list</option>
+            <?php $myLists = showLists($database);
+            foreach ($myLists as $list) : ?>
+                <option value="<?php echo $list['id']; ?>"><?php echo htmlspecialchars($list['title']); ?></option>
+            <?php endforeach ?>
+        </select>
+        <small class="form-text">Place task in task-list.</small>
         <br>
         <button name="task" type="submit" class="btn btn-secondary">Save changes</button>
     </div>

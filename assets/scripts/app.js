@@ -22,3 +22,12 @@ function setCheckboxEventListener(forms) {
     });
   });
 }
+/*Script: shows delete form*/
+const deleteForm = document.querySelector('.delete-user-form');
+const deleteBtn = document.querySelector('.delete');
+if (deleteForm) {
+  deleteBtn.addEventListener('click', () => {
+    deleteForm.classList.remove('hidden');
+    deleteBtn.classList.add('hidden');
+  });
+}
